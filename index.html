@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimization -->
+    <title>Analítica de Visitas | La Movida SST - De la Reacción a la Prevención</title>
+    <meta name="description" content="Dashboard de analíticas en tiempo real para La Movida SST. Monitoreo de tráfico y comportamiento web con enfoque en la prevención.">
+    <meta name="keywords" content="La Movida SST, Seguridad y Salud en el Trabajo, Analíticas, Dashboard, Prevención, Gestión">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .bg-grid {
+            background-image: linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .card-glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            transition: all 0.4s ease;
+        }
+
+        .gradient-top::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00205b, #007b85, #70ad47);
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px -5px rgba(0, 123, 133, 0.12);
+        }
+
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 ratio */
+        }
+        
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="bg-grid min-h-screen flex items-center justify-center py-10 px-4">
+
+    <main class="w-full max-w-6xl mx-auto">
+        <article class="card-glass gradient-top rounded-3xl shadow-xl p-6 md:p-10 space-y-8 card-hover relative overflow-hidden">
+
+            <header class="text-center">
+                <!-- Logo con efecto de elevación y borde -->
+                <div class="inline-block mb-6 group">
+                    <div class="relative transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-[#007b85] rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                        <img 
+                            src="https://assets.poap.xyz/cec12a20-fefb-4199-9cc0-b1ece87fe44d.png" 
+                            alt="Logo La Movida SST" 
+                            class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-2xl relative z-10 object-cover"
+                        >
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-extrabold text-[#00205b] tracking-tight">Analítica de Visitas</h1>
+                <p class="mt-2 text-xl md:text-2xl font-medium text-[#70ad47] italic">"De la Reacción a la Prevención"</p>
+                
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    Monitoreo en tiempo real para <strong class="font-bold text-[#007b85]">La Movida SST</strong>.
+                </p>
+                
+                <div class="mt-4 flex items-center justify-center gap-2 text-sm text-slate-500 font-medium">
+                    <i class="fas fa-sync-alt animate-spin-slow"></i>
+                    <span>Datos actualizados</span>
+                </div>
+            </header>
+
+            <!-- Contenedor del Iframe -->
+            <section class="bg-slate-50/50 border border-slate-100 rounded-2xl shadow-inner overflow-hidden">
+                <div class="iframe-container">
+                    <iframe 
+                        src="https://lookerstudio.google.com/embed/reporting/a52dba2d-8ef2-4dc1-9c74-20a2993627fc/page/YWYSF"  
+                        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" 
+                        allowfullscreen
+                        loading="lazy"
+                        title="Reporte de Analítica Web - La Movida SST">
+                    </iframe>
+                </div>
+            </section>
+
+            <footer class="text-center pt-4">
+                <a class="inline-flex items-center gap-3 bg-[#007b85] hover:bg-[#005f66] text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" 
+                   href="https://chat.whatsapp.com/DtQHMJqiLOmFOin4cHJODc" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Únete a nuestra comunidad en WhatsApp">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Únete a la comunidad</span>
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+</body>
+</html>

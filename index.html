@@ -4,494 +4,328 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#00205b">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="Observatorio digital de La Movida de SST+: tendencias, audiencia, países, dispositivos y canales a partir de Google Analytics 4.">
-  <meta name="author" content="David Linares Brea">
-  <meta property="og:title" content="Observatorio digital | La Movida de SST+">
-  <meta property="og:description" content="Indicadores, tendencias y alcance digital de La Movida de SST+ respaldados por Google Analytics 4.">
+  <meta name="description" content="Métricas de La Movida de SST+: usuarios, sesiones, vistas, países, dispositivos y canales de tráfico.">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="La Movida de SST+ · Nuestro alcance en cifras">
+  <meta property="og:description" content="Conoce el alcance digital de La Movida de SST+: usuarios, países, dispositivos y tendencias.">
   <meta property="og:url" content="https://metricas.movidasst.com/">
   <meta property="og:image" content="https://www.movidasst.com/og-movida-sst-casimiro-casimira-20261021-nitida.jpg">
-  <link rel="icon" href="https://www.movidasst.com/pwa/icon-512.png">
+  <link rel="icon" type="image/png" href="https://www.movidasst.com/pwa/icon-512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <title>Observatorio digital | La Movida de SST+</title>
+  <title>Métricas · La Movida de SST+</title>
   <style>
-  :root{--navy:#00205b;--teal:#007b85;--green:#70ad47;--yellow:#ffb600;--bg:#f8fafc;--ink:#18304c;--muted:#5a6d81;--stroke:#dce6ed;--white:#fff;--radius:20px}
-  *,*::before,*::after{box-sizing:border-box}
-  [hidden]{display:none!important}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 Outfit,Arial,sans-serif}
-  a,button{font:inherit}a{color:inherit}button{cursor:pointer}
-  a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-  .shell{width:min(100% - 32px,1240px);margin-inline:auto}
-  .top{background:#fff;border-bottom:1px solid var(--stroke);position:relative;z-index:3}
-  .top-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:73px}
-  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
-  .brand img{width:46px;height:46px;object-fit:contain}
-  .brand b{display:block;color:var(--navy);font-size:1.02rem;line-height:1.1}
-  .brand small{display:block;font-size:.72rem;color:var(--teal);font-weight:700;margin-top:3px}
-  .top-links{display:flex;gap:9px;align-items:center}
-  .linkbtn,.action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:10px 15px;border:1px solid var(--stroke);border-radius:12px;background:#fff;color:var(--navy);font-size:.82rem;font-weight:750;text-decoration:none}
-  .linkbtn:hover,.action:hover{border-color:var(--teal);background:#ecf8f7}
-  .linkbtn.primary,.action.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
-  .linkbtn.primary:hover,.action.primary:hover{background:#00616a}
-  .hero{background:linear-gradient(121deg,#001b4d,#003c66 55%,#007b85);color:#fff;overflow:hidden;position:relative}
-  .hero::before,.hero::after{content:"";position:absolute;border:1px solid #ffffff24;border-radius:50%;pointer-events:none}
-  .hero::before{height:360px;width:360px;right:-80px;top:-180px}.hero::after{height:250px;width:250px;right:140px;bottom:-205px}
-  .hero-in{position:relative;padding:38px 0 35px}
-  .eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#9af1e9}
-  h1{font-size:clamp(2rem,4.6vw,3.15rem);line-height:1.1;letter-spacing:-.045em;margin:10px 0 12px;max-width:780px}
-  .hero p{max-width:810px;font-size:.96rem;color:#e0f1f5;margin:0}
-  .hero-foot{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:18px}
-  .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff58;background:#ffffff15;border-radius:999px;padding:6px 11px;font-size:.74rem;font-weight:700;color:#fff}
-  .dot{width:7px;height:7px;border-radius:50%;background:#93e3b1}
-  .body{padding:19px 0 105px}
-  .notice{display:flex;align-items:flex-start;gap:11px;background:#fff7e6;border:1px solid #f0dfaa;border-left:4px solid var(--yellow);padding:13px 15px;border-radius:12px;margin-bottom:16px;color:#5b4c31;font-size:.83rem}
-  .notice b{color:#73530d}.notice p{margin:0}.notice span[aria-hidden]{font-size:1.14rem}
-  .navtabs{display:flex;gap:8px;margin:0 0 16px}
-  .navtabs button{background:#fff;border:1px solid var(--stroke);color:#4f667f;border-radius:12px;padding:11px 17px;font-weight:800;min-height:44px}
-  .navtabs button[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
-  .view{animation:show .18s ease}.view h2{font-size:1.32rem;line-height:1.2;color:var(--navy);margin:0 0 8px}
-  @keyframes show{from{opacity:.7;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
-  .lead{color:var(--muted);margin:0 0 17px;max-width:930px;font-size:.89rem}
-  .kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:15px}
-  .stat,.panel{background:#fff;border:1px solid var(--stroke);border-radius:var(--radius);box-shadow:0 8px 26px rgba(0,32,91,.035)}
-  .stat{padding:20px;min-width:0;position:relative;overflow:hidden}
-  .stat::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--teal)}
-  .stat:nth-child(2)::before{background:#00205b}.stat:nth-child(3)::before{background:#70ad47}.stat:nth-child(4)::before{background:#ffb600}
-  .stat .k-label{font-size:.76rem;font-weight:800;color:var(--muted);display:block}
-  .stat .k-value{font-size:clamp(1.54rem,3vw,2.28rem);font-weight:800;letter-spacing:-.035em;line-height:1.13;color:var(--navy);margin-top:10px;display:block}
-  .stat .k-delta{font-size:.72rem;color:#406177;margin-top:10px;display:block;font-weight:650}
-  .delta-up{color:#267746!important}.delta-down{color:#9c5635!important}
-  .two{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,1fr);gap:14px;margin-bottom:15px}
-  .panel{padding:20px;min-width:0}
-  .panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:13px}
-  .panel-head h2{margin:0;font-size:1.16rem}.panel-head p{font-size:.77rem;color:var(--muted);margin:4px 0 0}
-  .pill{font-size:.71rem;padding:5px 9px;white-space:nowrap;border:1px solid var(--stroke);border-radius:999px;color:var(--teal);font-weight:800;background:#f2faf9}
-  .trend{width:100%;height:auto;display:block;max-height:250px;overflow:visible}
-  .trend text{font:700 11px Outfit,Arial,sans-serif;fill:#72859a}
-  .chart-summary{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;color:var(--muted);font-size:.75rem;margin-top:8px}
-  .insights{display:grid;gap:10px}
-  .insight{border:1px solid var(--stroke);border-radius:13px;background:#f8fbfd;padding:11px 13px}
-  .insight strong{display:block;font-size:.93rem;color:var(--navy);margin-bottom:3px}
-  .insight span{color:var(--muted);font-size:.78rem}
-  .footline{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:.77rem;padding:8px 2px}
-  .section-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .bar-list{display:grid;gap:13px}
-  .bar-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#2d4760;font-weight:750;font-size:.82rem;margin-bottom:5px}
-  .bar-heading .figure{color:var(--navy);font-variant-numeric:tabular-nums;white-space:nowrap}
-  .track{width:100%;height:10px;background:#e8f0f3;border-radius:99px;overflow:hidden}
-  .fill{height:100%;background:linear-gradient(90deg,#007b85,#69c6b7);border-radius:99px;min-width:2px}
-  .panel-note{font-size:.76rem;color:var(--muted);margin:17px 0 0}
-  .donut-wrap{display:flex;align-items:center;gap:21px;flex-wrap:wrap}
-  .donut{width:166px;height:166px;flex:0 0 166px;border-radius:50%;background:conic-gradient(#00205b 0 50%,#007b85 50% 90%,#70ad47 90% 100%);display:grid;place-items:center}
-  .donut::after{content:"";width:105px;height:105px;border-radius:50%;background:white}
-  .legend{display:grid;gap:11px;flex:1;min-width:180px}
-  .legend-row{display:grid;grid-template-columns:11px 1fr auto;gap:9px;align-items:center;font-size:.82rem}
-  .swatch{height:11px;width:11px;border-radius:4px}
-  .legend-row strong{color:var(--navy)}
-  .channel-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:0 0 15px}
-  .mini-card{background:#edf7f8;border:1px solid #c9e3e6;border-radius:13px;padding:16px}
-  .mini-card span{font-size:.75rem;color:var(--muted);display:block}
-  .mini-card strong{display:block;margin-top:6px;font-size:1.42rem;color:var(--navy)}
-  .readable{font-size:.88rem;color:#4a6075;line-height:1.7}
-  .readable p{margin:0 0 13px}.readable strong{color:var(--navy)}
-  .small-head{font-size:1.04rem;color:var(--navy);margin:0 0 9px}
-  .outline{display:inline-flex;align-items:center;gap:8px;padding:12px 15px;border:1px solid var(--teal);border-radius:12px;color:var(--teal);text-decoration:none;font-size:.82rem;font-weight:800;min-height:44px}
-  .outline:hover{background:#ebf8f8}
-  .method{margin:0;padding-left:20px;color:var(--muted);font-size:.85rem;line-height:1.8}
-  .method li{margin-bottom:8px}
-  .retry{margin-top:12px;border:1px solid var(--stroke);border-radius:12px;padding:10px 13px;background:white;color:var(--navy);font-weight:750}
-  .footer{font-size:.76rem;color:var(--muted);padding:19px 0 18px;border-top:1px solid var(--stroke);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .footer a{color:var(--teal);font-weight:700}
-  .bottom-nav{display:none}
-  @media(max-width:970px){.kpi{grid-template-columns:repeat(2,minmax(0,1fr))}.two,.section-grid{grid-template-columns:1fr}}
-  @media(max-width:600px){
-    .shell{width:min(100% - 24px,1240px)}
-    .top-in{min-height:65px}
-    .brand img{height:39px;width:39px}
-    .brand b{font-size:.9rem}.brand small{font-size:.65rem}
-    .top-links .linkbtn:first-child{display:none}
-    .top-links .linkbtn{font-size:.74rem;padding:8px 10px;min-height:37px}
-    .hero-in{padding:26px 0 25px}
-    .hero p{font-size:.84rem}
-    h1{font-size:2rem}
-    .hero-foot{margin-top:14px}
-    .chip{font-size:.7rem}
-    .body{padding-top:13px;padding-bottom:112px}
-    .navtabs{display:none}
-    .kpi{gap:9px;margin-bottom:10px}
-    .stat{padding:15px 13px;border-radius:15px}
-    .stat .k-value{font-size:1.65rem;margin-top:7px}
-    .stat .k-label{font-size:.71rem}
-    .stat .k-delta{font-size:.66rem;margin-top:6px}
-    .panel{padding:15px;border-radius:16px}
-    .panel-head{margin-bottom:12px}
-    .panel-head h2{font-size:1.06rem}
-    .two,.section-grid{gap:10px}
-    .notice{font-size:.76rem;padding:11px 12px}
-    .channel-summary{gap:7px}
-    .mini-card{padding:11px 8px}.mini-card strong{font-size:1.15rem}
-    .donut{width:136px;height:136px;flex-basis:136px}.donut::after{width:85px;height:85px}
-    .bottom-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;position:fixed;z-index:50;left:0;bottom:0;right:0;background:#00205b;padding:8px max(7px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(7px,env(safe-area-inset-left));box-shadow:0 -6px 25px rgba(0,32,91,.22)}
-    .bottom-nav button{border:0;border-radius:10px;background:transparent;color:#d5e9f6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:6px 3px;min-height:51px;font-size:.67rem;font-weight:800}
-    .bottom-nav button[aria-selected="true"]{background:#ffffff27;color:#fff}
-    .bottom-nav svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-    .footer{padding-bottom:94px}
-  }
-  @media(prefers-reduced-motion:reduce){.view{animation:none}}
+    :root{--navy:#00205b;--navyd:#001947;--teal:#007b85;--aqua:#e6f6f4;--green:#70ad47;--yellow:#ffb600;--ink:#1d314c;--muted:#66788c;--bg:#f8fafc;--line:#dce6ed;--white:#fff;--shadow:0 9px 28px rgba(0,32,91,.047)}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);font:400 15px/1.48 Outfit,system-ui,Arial,sans-serif;color:var(--ink);min-width:300px}
+    button,a{font:inherit}a{color:inherit}button{cursor:pointer}
+    [hidden]{display:none!important}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+    .wrap{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+    .brandbar{background:#fff;border-bottom:1px solid var(--line)}
+    .brandinner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand img{height:48px;width:48px;object-fit:contain}
+    .brand strong{display:block;font-size:1.07rem;line-height:1.1;color:var(--navy);font-weight:800}
+    .brand small{display:block;color:var(--teal);font-size:.71rem;font-weight:700;margin-top:5px}
+    .home-link{border:1px solid #b9d9de;background:#eff8f7;border-radius:12px;text-decoration:none;padding:9px 13px;color:var(--teal);font-weight:800;font-size:.83rem}
+    .home-link:hover{background:#dff3f0}
+    .hero{background:linear-gradient(116deg,#00205b 0%,#003f70 58%,#007b85 100%);position:relative;isolation:isolate;overflow:hidden;color:white}
+    .hero::after{content:"";position:absolute;right:-110px;top:-190px;width:490px;height:490px;border:1px solid #ffffff30;border-radius:50%;z-index:-1;box-shadow:0 0 0 90px #ffffff09,0 0 0 195px #ffffff08}
+    .hero-content{padding:33px 0 30px}
+    .hero-label{text-transform:uppercase;letter-spacing:.12em;color:#92e8e0;font-size:.73rem;font-weight:800}
+    h1{font-size:clamp(2rem,5vw,3.16rem);line-height:1.05;letter-spacing:-.04em;margin:10px 0 10px;font-weight:800}
+    .hero-sub{max-width:780px;margin:0;color:#e4f4fa;font-size:.98rem}
+    .hero-meta{margin-top:19px;display:flex;gap:9px;flex-wrap:wrap}
+    .meta{background:#ffffff18;border:1px solid #ffffff45;border-radius:99px;padding:6px 11px;font-size:.77rem;font-weight:700}
+    main{padding:17px 0 80px}
+    .tabs{display:flex;gap:8px;margin:0 0 17px}
+    .tab{border:1px solid var(--line);border-radius:12px;background:#fff;color:#587089;padding:11px 18px;font-weight:800;min-height:44px}
+    .tab[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+    .page{animation:show .16s ease}
+    @keyframes show{from{opacity:.8;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+    .page-title{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin:0 0 14px}
+    .page-title h2{color:var(--navy);font-size:1.44rem;line-height:1.19;margin:0 0 3px}
+    .page-title p{margin:0;color:var(--muted);font-size:.87rem}
+    .period{display:inline-flex;align-items:center;border:1px solid #cfe6e4;background:#edf8f6;color:var(--teal);border-radius:99px;font-size:.73rem;font-weight:800;padding:7px 10px;white-space:nowrap}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:15px}
+    .metric{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:20px;padding:21px 19px}
+    .metric::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--teal)}
+    .metric:nth-child(2)::before{background:var(--navy)}
+    .metric:nth-child(3)::before{background:var(--green)}
+    .metric:nth-child(4)::before{background:var(--yellow)}
+    .metric-label{color:var(--muted);font-size:.82rem;font-weight:800}
+    .metric-value{display:block;font-size:clamp(1.75rem,3.2vw,2.55rem);letter-spacing:-.04em;line-height:1.06;font-weight:800;color:var(--navy);margin:11px 0}
+    .metric-small{font-size:.73rem;color:#70839a;font-weight:650}
+    .section-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:14px}
+    .panel{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:20px;padding:20px;min-width:0}
+    .panel-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}
+    .panel-title h3{font-size:1.1rem;color:var(--navy);margin:0;line-height:1.22}
+    .panel-title small{color:var(--muted);font-size:.71rem;font-weight:650}
+    .panel-tag{font-size:.68rem;background:#ebf8f6;color:var(--teal);padding:5px 9px;border-radius:99px;font-weight:800;white-space:nowrap}
+    .bar-chart{display:flex;align-items:end;gap:7px;height:210px;margin-top:8px;border-bottom:1px solid #dce6ed;padding:5px 2px 0}
+    .monthbar{flex:1;display:flex;align-items:center;justify-content:end;flex-direction:column;height:100%;gap:5px;min-width:0}
+    .monthbar .value{font-weight:750;font-size:.65rem;color:var(--teal)}
+    .monthbar .bar{width:min(100%,39px);background:linear-gradient(180deg,#39b1a8,#007b85);border-radius:6px 6px 0 0;min-height:2px}
+    .monthbar .axis{color:var(--muted);font-size:.67rem;font-weight:750;height:19px;white-space:nowrap;overflow:hidden;text-align:center}
+    .insights{display:grid;gap:9px}
+    .insight{padding:12px 14px;border-radius:14px;background:#f3f8fb;border:1px solid #e1eaf0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .insight b{font-weight:750;color:#3b5770;font-size:.78rem}
+    .insight strong{color:var(--navy);font-weight:800;font-size:1.1rem;white-space:nowrap}
+    .insight:first-child{background:#edf8f6;border-color:#cfe9e7}
+    .section-grid.equal{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .big-rank{display:grid;gap:14px}
+    .rank{display:grid;gap:5px}
+    .rankline{display:flex;justify-content:space-between;gap:14px;font-size:.83rem;font-weight:750}
+    .rankline .rankname{color:#435b70}
+    .rankline .ranknum{font-variant-numeric:tabular-nums;color:var(--navy);white-space:nowrap}
+    .track{height:11px;border-radius:99px;background:#e9f0f4;overflow:hidden}
+    .fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#007b85,#48bbaa)}
+    .smalltiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-bottom:14px}
+    .tile{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px;min-width:0}
+    .tile .label{display:block;font-size:.78rem;color:var(--muted);font-weight:750}
+    .tile .num{font-size:1.63rem;color:var(--navy);font-weight:800;display:block;margin-top:7px}
+    .device-flex{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+    .donut{width:208px;height:208px;border-radius:50%;background:#e9eef2;display:grid;place-items:center;flex:0 0 208px}
+    .donut:after{content:"";height:133px;width:133px;background:white;border-radius:50%}
+    .legend{display:grid;gap:14px;flex:1;min-width:170px}
+    .legenditem{display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:center;font-size:.86rem;font-weight:750}
+    .legenditem .swatch{height:12px;width:12px;border-radius:4px}
+    .legenditem .legendval{color:var(--navy);font-variant-numeric:tabular-nums;font-weight:800}
+    .footer{border-top:1px solid var(--line);padding:18px 0 22px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#687d91;font-size:.78rem}
+    .footer a{color:var(--teal);text-decoration:none;font-weight:800}
+    .bottom{display:none}
+    @media(max-width:970px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.section-grid,.section-grid.equal{grid-template-columns:1fr}}
+    @media(max-width:600px){
+      .wrap{width:calc(100% - 24px)}
+      .brandinner{min-height:64px}
+      .brand img{width:42px;height:42px}
+      .brand strong{font-size:.91rem}.brand small{font-size:.64rem}
+      .home-link{font-size:.72rem;padding:8px 10px}
+      .hero-content{padding:23px 0 24px}
+      h1{font-size:2.08rem}
+      .hero-sub{font-size:.83rem}
+      .hero-meta{margin-top:14px}
+      .meta{font-size:.7rem}
+      main{padding:14px 0 100px}
+      .tabs{display:none}
+      .page-title{align-items:flex-start;margin-bottom:12px;flex-wrap:wrap}
+      .page-title h2{font-size:1.23rem}
+      .page-title p{font-size:.79rem}
+      .metrics{gap:9px;margin-bottom:10px}
+      .metric{padding:16px 13px;border-radius:16px}
+      .metric-label{font-size:.73rem}
+      .metric-value{font-size:1.74rem;margin:9px 0 8px}
+      .metric-small{font-size:.68rem}
+      .section-grid,.section-grid.equal{gap:10px}
+      .panel{border-radius:16px;padding:15px}
+      .panel-title h3{font-size:1rem}
+      .bar-chart{height:195px;gap:4px}
+      .monthbar .value{font-size:.58rem}.monthbar .axis{font-size:.55rem}
+      .smalltiles{gap:7px}
+      .tile{padding:12px 9px}.tile .label{font-size:.69rem}.tile .num{font-size:1.14rem}
+      .donut{width:163px;height:163px;flex-basis:163px}.donut:after{height:102px;width:102px}
+      .device-flex{gap:17px}
+      .bottom{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;position:fixed;bottom:0;left:0;right:0;background:#00205b;padding:8px max(8px,env(safe-area-inset-left)) calc(7px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-right));box-shadow:0 -7px 26px #00205b30;z-index:50}
+      .bottom button{border:0;border-radius:9px;color:#d0e6f4;background:transparent;font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;gap:3px;flex-direction:column;min-height:52px;padding:5px}
+      .bottom button[aria-selected=true]{background:#ffffff2a;color:white}
+      .bottom svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+      .footer{padding-bottom:98px}
+    }
+    @media(prefers-reduced-motion:reduce){.page{animation:none}html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
-<header class="top"><div class="shell top-in">
-  <a class="brand" href="https://www.movidasst.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir La Movida de SST+">
-    <img src="https://www.movidasst.com/logo-oficial-movida-sst-plus.png" width="46" height="46" alt="">
-    <span><b>La Movida de SST+</b><small>De la Reacción a la Prevención</small></span>
-  </a>
-  <div class="top-links">
-    <a class="linkbtn" href="https://www.movidasst.com/" target="_blank" rel="noopener noreferrer">Ir al HUB ↗</a>
-    <a class="linkbtn primary" id="reportTopLink" href="https://lookerstudio.google.com/reporting/a52dba2d-8ef2-4dc1-9c74-20a2993627fc/page/YWYSF" target="_blank" rel="noopener noreferrer">Reporte original ↗</a>
+<header class="brandbar">
+  <div class="wrap brandinner">
+    <a href="https://www.movidasst.com/" target="_blank" rel="noopener noreferrer" class="brand">
+      <img src="https://www.movidasst.com/logo-oficial-movida-sst-plus.png" width="48" height="48" alt="">
+      <span><strong>La Movida de SST+</strong><small>De la Reacción a la Prevención</small></span>
+    </a>
+    <a class="home-link" href="https://www.movidasst.com/" target="_blank" rel="noopener noreferrer">Ir a La Movida ↗</a>
   </div>
-</div></header>
-
-<section class="hero" aria-labelledby="heroTitle">
-  <div class="shell hero-in">
-    <span class="eyebrow">Observatorio digital · La Movida de SST+</span>
-    <h1 id="heroTitle">Nuestro alcance, en datos.</h1>
-    <p>Una mirada sencilla a las visitas, la audiencia y las tendencias. Indicadores consolidados de Google Analytics 4, sin listas interminables de subdominios.</p>
-    <div class="hero-foot">
-      <span class="chip"><span class="dot"></span> Fuente: Google Analytics 4</span>
-      <span class="chip" id="periodChip">Preparando el período…</span>
-      <span class="chip">Actualización: corte verificado</span>
+</header>
+<section class="hero">
+  <div class="wrap hero-content">
+    <span class="hero-label">Observatorio digital de La Movida SST+</span>
+    <h1>Nuestro alcance en cifras.</h1>
+    <p class="hero-sub">Una mirada general al crecimiento de nuestra comunidad digital: visitas, países, dispositivos y canales.</p>
+    <div class="hero-meta">
+      <span class="meta" id="period">Acumulado 2024–2026</span>
+      <span class="meta">Google Analytics</span>
     </div>
   </div>
 </section>
-
-<main class="shell body" id="mainContent">
-  <div class="notice" id="coverageNotice" role="note">
-    <span aria-hidden="true">ⓘ</span><p>El corte reciente mide principalmente Moodle (<b>movidasst.org</b>). Recuperamos el histórico de <b>www.movidasst.com (julio–diciembre de 2025)</b> en otra propiedad. Los 57 subdominios requieren validar sus nuevos datos; no sumamos usuarios ni confundimos períodos.</p>
-  </div>
-  <nav class="navtabs" aria-label="Secciones del observatorio">
-    <button type="button" data-view="resumen" aria-controls="vista-resumen" aria-selected="true">▦ Resumen</button>
-    <button type="button" data-view="audiencia" aria-controls="vista-audiencia" aria-selected="false">◉ Audiencia</button>
-    <button type="button" data-view="origen" aria-controls="vista-origen" aria-selected="false">↗ Canales</button>
-    <button type="button" data-view="historico" aria-controls="vista-historico" aria-selected="false">◷ Histórico web</button>
-    <button type="button" data-view="fuentes" aria-controls="vista-fuentes" aria-selected="false">ⓘ Fuentes</button>
+<main class="wrap" id="main">
+  <nav class="tabs" aria-label="Estadísticas">
+    <button type="button" data-page="general" aria-selected="true" class="tab">▦ General</button>
+    <button type="button" data-page="paises" aria-selected="false" class="tab">◎ Países</button>
+    <button type="button" data-page="dispositivos" aria-selected="false" class="tab">▣ Dispositivos</button>
+    <button type="button" data-page="canales" aria-selected="false" class="tab">↗ Canales</button>
   </nav>
-
-  <section class="view" id="vista-resumen" data-panel="resumen" aria-label="Resumen general">
-    <h2>Resumen general</h2>
-    <p class="lead" id="summaryIntro">Preparando los datos verificados del período.</p>
-    <div class="kpi" aria-label="Indicadores principales">
-      <article class="stat"><span class="k-label">Usuarios activos</span><strong class="k-value" id="kUsers">—</strong><span class="k-delta" id="dUsers">Comparación pendiente</span></article>
-      <article class="stat"><span class="k-label">Sesiones</span><strong class="k-value" id="kSessions">—</strong><span class="k-delta" id="dSessions">Comparación pendiente</span></article>
-      <article class="stat"><span class="k-label">Vistas de página</span><strong class="k-value" id="kViews">—</strong><span class="k-delta" id="dViews">Comparación pendiente</span></article>
-      <article class="stat"><span class="k-label">Tasa de interacción</span><strong class="k-value" id="kRate">—</strong><span class="k-delta" id="dRate">Comparación pendiente</span></article>
+  <section class="page" data-view="general" id="general">
+    <div class="page-title">
+      <div><h2>Métricas generales</h2><p>Resultados acumulados de las plataformas de La Movida SST+</p></div>
+      <span class="period">Vista general</span>
     </div>
-    <div class="two">
-      <article class="panel">
-        <div class="panel-head"><div><h2>Cómo evolucionan las visitas</h2><p>Sesiones diarias durante el período</p></div><span class="pill">Tendencia</span></div>
-        <svg class="trend" id="trendChart" viewBox="0 0 670 235" role="img" aria-label="Gráfico de evolución diaria de sesiones"></svg>
-        <div class="chart-summary"><span id="trendMin">—</span><span id="trendMax">—</span></div>
-      </article>
-      <article class="panel">
-        <div class="panel-head"><div><h2>Lo más relevante</h2><p>Hallazgos basados en los datos del período</p></div></div>
-        <div class="insights" id="insightList"><div class="insight"><strong>Preparando información</strong><span>Los hallazgos aparecerán al cargar el informe.</span></div></div>
-      </article>
+    <div class="metrics">
+      <article class="metric"><span class="metric-label">Usuarios</span><strong class="metric-value" id="totalUsers">8.352</strong><span class="metric-small">Audiencia registrada</span></article>
+      <article class="metric"><span class="metric-label">Sesiones</span><strong class="metric-value" id="totalSessions">27.883</strong><span class="metric-small">Visitas registradas</span></article>
+      <article class="metric"><span class="metric-label">Vistas</span><strong class="metric-value" id="totalViews">195.273</strong><span class="metric-small">Páginas y pantallas vistas</span></article>
+      <article class="metric"><span class="metric-label">Interacción</span><strong class="metric-value" id="totalEngagement">65,4 %</strong><span class="metric-small">Sesiones con interacción</span></article>
     </div>
-    <div class="footline"><span id="generatedLabel">Datos de GA4 · Sin actualización en tiempo real</span><button class="action" id="retryData" type="button">↻ Volver a leer el corte</button></div>
-  </section>
-
-  <section class="view" id="vista-audiencia" data-panel="audiencia" aria-label="Países y dispositivos" hidden>
-    <h2>¿Desde dónde nos visitan?</h2>
-    <p class="lead">Los principales países y dispositivos del período, con el resto agrupado para que sea fácil interpretar el alcance.</p>
     <div class="section-grid">
       <article class="panel">
-        <div class="panel-head"><div><h2>Principales países</h2><p>Sesiones por país</p></div><span class="pill">Geografía</span></div>
-        <div class="bar-list" id="countryList"><p class="lead">Cargando distribución…</p></div>
-        <p class="panel-note">La ubicación es aproximada, según los datos de Analytics. Las visitas no equivalen a integrantes registrados.</p>
+        <div class="panel-title"><div><h3>Evolución de visitas</h3><small>Sesiones por mes</small></div><span class="panel-tag">Últimos 12 meses</span></div>
+        <div id="monthlyChart" class="bar-chart" role="img" aria-label="Visitas de los últimos 12 meses"></div>
       </article>
       <article class="panel">
-        <div class="panel-head"><div><h2>Dispositivos</h2><p>Distribución de sesiones</p></div><span class="pill">Tecnología</span></div>
-        <div class="donut-wrap">
-          <div id="deviceDonut" class="donut" role="img" aria-label="Distribución de sesiones por dispositivo"></div>
-          <div id="deviceLegend" class="legend"><p class="lead">Cargando distribución…</p></div>
+        <div class="panel-title"><div><h3>Principales resultados</h3><small>Indicadores destacados</small></div></div>
+        <div class="insights" id="highlights">
+          <div class="insight"><b>Principal país</b><strong>Venezuela</strong></div>
+          <div class="insight"><b>Segundo país</b><strong>Chile</strong></div>
+          <div class="insight"><b>Dispositivo más usado</b><strong>Escritorio</strong></div>
+          <div class="insight"><b>Canal principal</b><strong>Directo</strong></div>
         </div>
-        <p class="panel-note">Un mismo visitante puede acceder desde distintos dispositivos. No se suman usuarios únicos entre categorías.</p>
       </article>
     </div>
   </section>
-
-  <section class="view" id="vista-origen" data-panel="origen" aria-label="Fuentes de visitas" hidden>
-    <h2>¿Cómo llegan las personas?</h2>
-    <p class="lead">Analizamos los canales de adquisición sin confundir una búsqueda con una visita directa o una referencia desde otro sitio.</p>
-    <div class="channel-summary" id="channelSummary">
-      <div class="mini-card"><span>Directo</span><strong>—</strong></div><div class="mini-card"><span>Buscadores</span><strong>—</strong></div><div class="mini-card"><span>Referencias</span><strong>—</strong></div>
+  <section class="page" data-view="paises" id="paises" hidden>
+    <div class="page-title"><div><h2>Países de nuestra audiencia</h2><p>Distribución geográfica de las visitas</p></div><span class="period">Alcance internacional</span></div>
+    <div class="smalltiles">
+      <div class="tile"><span class="label">País principal</span><strong class="num" id="leaderCountry">Venezuela</strong></div>
+      <div class="tile"><span class="label">Sesiones</span><strong class="num" id="leaderCountrySessions">20.457</strong></div>
+      <div class="tile"><span class="label">Países</span><strong class="num" id="countCountries">—</strong></div>
     </div>
-    <article class="panel"><div class="panel-head"><div><h2>Origen del tráfico</h2><p>Sesiones agrupadas por canal en GA4</p></div></div>
-      <div class="bar-list" id="channelList"><p class="lead">Cargando canales…</p></div>
-      <p class="panel-note">Los canales son clasificaciones automáticas de Analytics. «Directo» puede incluir visitas sin fuente identificable; no equivale necesariamente a escribir la dirección del sitio.</p>
-    </article>
+    <div class="panel"><div class="panel-title"><h3>Principales países</h3><span class="panel-tag">Sesiones</span></div><div id="countryBars" class="big-rank"></div></div>
   </section>
-
-  <section class="view" id="vista-historico" data-panel="historico" aria-label="Histórico de la web principal" hidden>
-    <h2>Histórico recuperado · www.movidasst.com</h2>
-    <p class="lead" id="hIntro">Preparando información de la web principal.</p>
-    <div class="notice"><span aria-hidden="true">ⓘ</span><p><b>Período histórico, no actual.</b> La última actividad identificada de www.movidasst.com es del <b>30 de diciembre de 2025</b>. No refleja las visitas de 2026.</p></div>
-    <div class="kpi">
-      <article class="stat"><span class="k-label">Usuarios activos</span><strong class="k-value" id="hUsers">—</strong><span class="k-delta">Histórico web principal</span></article>
-      <article class="stat"><span class="k-label">Sesiones</span><strong class="k-value" id="hSessions">—</strong><span class="k-delta">Histórico web principal</span></article>
-      <article class="stat"><span class="k-label">Vistas</span><strong class="k-value" id="hViews">—</strong><span class="k-delta">Histórico web principal</span></article>
-      <article class="stat"><span class="k-label">Interacción</span><strong class="k-value" id="hRate">—</strong><span class="k-delta">Histórico web principal</span></article>
-    </div>
-    <div class="section-grid">
-      <article class="panel"><div class="panel-head"><div><h2>Países</h2><p>Sesiones históricas</p></div></div><div class="bar-list" id="hCountries"></div></article>
-      <article class="panel"><div class="panel-head"><div><h2>Dispositivos</h2><p>Sesiones históricas</p></div></div><div class="bar-list" id="hDevices"></div></article>
-      <article class="panel"><div class="panel-head"><div><h2>Evolución mensual</h2><p>Actividad de julio a diciembre de 2025</p></div></div><div class="bar-list" id="hMonths"></div></article>
-      <article class="panel"><div class="panel-head"><div><h2>Canales</h2><p>Fuentes de tráfico históricas</p></div></div><div class="bar-list" id="hChannels"></div></article>
-    </div>
-    <p class="panel-note">Fuente: GA4, propiedad 414669681 (llamada «movidasst.org», pero con datos de www.movidasst.com). Los KPI principales están filtrados por hostname. Los desgloses de audiencia contienen un volumen mínimo de otros hosts.</p>
-    <p class="lead" id="hError" hidden>No se pudo cargar el histórico.</p>
-  </section>
-
-  <section class="view" id="vista-fuentes" data-panel="fuentes" aria-label="Fuentes y metodología" hidden>
-    <h2>Transparencia de los datos</h2>
-    <p class="lead">Queremos compartir resultados verificables, sin inflar el alcance de la comunidad ni confundir diferentes indicadores.</p>
-    <div class="section-grid">
-      <article class="panel readable">
-        <h3 class="small-head">Fuente y actualización</h3>
-        <p>Fuente: <strong>Google Analytics 4</strong> vía Windsor.ai. El período reciente corresponde a <strong>Movidasst (401557991)</strong>, que mide Moodle. La web principal tiene un histórico separado en la propiedad <strong>movidasst.org (414669681)</strong>.</p>
-        <p>Las cifras visibles son una <strong>instantánea fechada</strong>, no una conexión en directo desde esta página a una API privada. «Volver a leer el corte» recarga el archivo publicado, no solicita nuevos datos a GA4.</p>
-        <p id="timezoneDetail">La propiedad de la web principal ya usa America/Santiago. La propiedad que mide Moodle continúa configurada en America/Los_Angeles; debe modificarse en Administrador de GA4.</p>
-        <a class="outline" id="originalReportLink" target="_blank" rel="noopener noreferrer" href="https://lookerstudio.google.com/reporting/a52dba2d-8ef2-4dc1-9c74-20a2993627fc/page/YWYSF">Abrir informe original de Looker Studio ↗</a>
-      </article>
-      <article class="panel">
-        <h3 class="small-head">Cómo interpretar los indicadores</h3>
-        <ol class="method">
-          <li><strong>Usuarios activos:</strong> usuarios que interactuaron durante el período, según GA4; no son integrantes registrados.</li>
-          <li><strong>Sesiones:</strong> períodos de interacción. Una misma persona puede generar varias.</li>
-          <li><strong>Vistas:</strong> visualizaciones de páginas o pantallas, incluidas las repetidas.</li>
-          <li><strong>Tasa de interacción:</strong> proporción de sesiones que cumplieron los criterios de interacción de GA4.</li>
-          <li><strong>Comparación:</strong> se realiza contra un período anterior de igual duración.</li>
-        </ol>
-      </article>
-      <article class="panel readable">
-        <h3 class="small-head">Cobertura del ecosistema</h3>
-        <p>Se añadió la medición del flujo histórico web <strong>G-WQMF05XMJL</strong> a <strong>57 subdominios</strong>. Su aparición en los informes requiere publicación correcta, visitas con consentimiento y procesamiento de Analytics.</p>
-        <p>Hasta validar esos eventos, los datos se presentan como <strong>tráfico medido por la propiedad GA4</strong>, no como la audiencia total de las 57 plataformas.</p>
-        <a class="outline" href="https://github.com/movidasst/metricas/blob/main/cobertura-ga4.json" target="_blank" rel="noopener noreferrer">Consultar inventario técnico ↗</a>
-      </article>
-      <article class="panel readable">
-        <h3 class="small-head">Privacidad y límites</h3>
-        <p>La integración web recién añadida solicita consentimiento antes de activar Analytics y elimina los parámetros de las URL de sus eventos de vista de página.</p>
-        <p>La fuente del informe puede contener configuraciones históricas distintas; las vistas agregadas no permiten identificar personas concretas.</p>
-        <a class="outline" href="https://registro.movidasst.com/privacidad.html" target="_blank" rel="noopener noreferrer">Leer aviso de privacidad ↗</a>
-      </article>
+  <section class="page" data-view="dispositivos" id="dispositivos" hidden>
+    <div class="page-title"><div><h2>Dispositivos utilizados</h2><p>Cómo acceden las personas a La Movida SST+</p></div></div>
+    <div class="section-grid equal">
+      <div class="panel"><div class="panel-title"><h3>Distribución de dispositivos</h3></div>
+        <div class="device-flex"><div id="deviceDonut" class="donut" role="img" aria-label="Distribución por dispositivo"></div><div class="legend" id="deviceLegend"></div></div>
+      </div>
+      <div class="panel"><div class="panel-title"><h3>Sesiones por dispositivo</h3></div><div id="deviceBars" class="big-rank"></div></div>
     </div>
   </section>
-  <p class="lead" id="dataError" role="alert" hidden>No se pudo obtener el archivo de datos. Comprueba la conexión y vuelve a intentarlo.</p>
+  <section class="page" data-view="canales" id="canales" hidden>
+    <div class="page-title"><div><h2>Cómo llegan las personas</h2><p>Fuentes de tráfico del ecosistema</p></div></div>
+    <div class="smalltiles">
+      <div class="tile"><span class="label">Directo</span><strong class="num" id="directP">—</strong></div>
+      <div class="tile"><span class="label">Buscadores</span><strong class="num" id="searchP">—</strong></div>
+      <div class="tile"><span class="label">Referencias</span><strong class="num" id="refP">—</strong></div>
+    </div>
+    <div class="panel"><div class="panel-title"><h3>Canales de adquisición</h3><span class="panel-tag">Sesiones</span></div><div class="big-rank" id="channelBars"></div></div>
+  </section>
 </main>
-<footer class="shell footer">
+<footer class="footer wrap">
   <span>La Movida de SST+ · Elaborado por David Linares Brea</span>
-  <span>De la Reacción a la Prevención · <a href="https://www.movidasst.com/" target="_blank" rel="noopener noreferrer">www.movidasst.com</a></span>
+  <a href="https://www.movidasst.com/" target="_blank" rel="noopener noreferrer">www.movidasst.com</a>
 </footer>
-<nav class="bottom-nav" aria-label="Navegación por secciones">
-  <button type="button" data-view="resumen" aria-controls="vista-resumen" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Resumen</button>
-  <button type="button" data-view="audiencia" aria-controls="vista-audiencia" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-4 5-4 13 0 18M12 3c4 5 4 13 0 18"/></svg>Audiencia</button>
-  <button type="button" data-view="origen" aria-controls="vista-origen" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 18h16M4 18V4M7 14l4-4 3 2 5-6M16 6h3v3"/></svg>Canales</button>
-  <button type="button" data-view="historico" aria-controls="vista-historico" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 3 6.7M3 19v-6h6M12 7v5l3 2"/></svg>Histórico</button>
-  <button type="button" data-view="fuentes" aria-controls="vista-fuentes" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg>Fuentes</button>
+<nav class="bottom" aria-label="Navegación móvil">
+  <button type="button" data-page="general" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>General</button>
+  <button type="button" data-page="paises" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-4 5-4 13 0 18M12 3c4 5 4 13 0 18"/></svg>Países</button>
+  <button type="button" data-page="dispositivos" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="13" rx="1"/><path d="M8 20h8M12 16v4"/></svg>Dispositivos</button>
+  <button type="button" data-page="canales" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 19h16M4 19V5M7 15l5-5 3 2 5-7M17 5h3v3"/></svg>Canales</button>
 </nav>
 <script>
-(()=>{
-  "use strict";
-  const $=s=>document.querySelector(s);
-  const $$=s=>Array.from(document.querySelectorAll(s));
-  const nf = new Intl.NumberFormat("es-CL",{maximumFractionDigits:0});
-  const nf1 = new Intl.NumberFormat("es-CL",{maximumFractionDigits:1,minimumFractionDigits:1});
-  const dateFmt = s=>{
-    if(!/^\d{4}-\d{2}-\d{2}$/.test(s||""))return String(s||"");
-    const [y,m,d]=s.split("-").map(Number);
-    return new Intl.DateTimeFormat("es-CL",{day:"numeric",month:"short",timeZone:"UTC"}).format(new Date(Date.UTC(y,m-1,d)));
-  };
-  const pct = n => nf1.format(n*100)+" %";
-  const set=(s,v)=>{const el=$(s);if(el)el.textContent=v};
-  const num=x=>Number.isFinite(Number(x))?Number(x):0;
-  function delta(current,previous,kind){
-    if(!Number.isFinite(Number(previous))||num(previous)===0)return "Sin comparación";
-    if(kind==="rate"){
-      const points=(num(current)-num(previous))*100;
-      return (points>=0?"+":"")+nf1.format(points)+" puntos vs. período anterior";
-    }
-    const n=(num(current)/num(previous)-1)*100;
-    return (n>=0?"+":"")+nf1.format(n)+" % vs. período anterior";
-  }
-  function trend(rows){
-    const svg=$("#trendChart");
-    svg.replaceChildren();
-    const good=rows.filter(x=>Number.isFinite(num(x.sessions))).slice(0,60);
-    if(!good.length)return;
-    const max=Math.max(1,...good.map(x=>num(x.sessions)));
-    const W=670,H=235,L=29,R=10,T=22,B=40,usableW=W-L-R,usableH=H-T-B;
-    const px=i=>L+(good.length<=1?0:(i/(good.length-1))*usableW);
-    const py=v=>T+usableH-v/max*usableH;
-    const ns="http://www.w3.org/2000/svg";
-    const element=(tag,attrs)=>{const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,String(v)));svg.append(e);return e};
-    [0,.25,.5,.75,1].forEach(f=>{
-      const y=py(max*f);
-      element("line",{x1:L,y1:y,x2:W-R,y2:y,stroke:"#e0e9ef","stroke-width":1});
-      const label=element("text",{x:0,y:y+4});label.textContent=nf.format(Math.round(max*f));
-    });
-    const arr=good.map((x,i)=>[px(i),py(num(x.sessions))]);
-    const line=arr.map((v,i)=>(i===0?"M":"L")+v[0].toFixed(1)+","+v[1].toFixed(1)).join(" ");
-    const area=line+" L"+(W-R)+","+(H-B)+" L"+L+","+(H-B)+" Z";
-    element("path",{d:area,fill:"#007b8515"});
-    element("path",{d:line,fill:"none",stroke:"#007b85","stroke-width":3,"stroke-linejoin":"round","stroke-linecap":"round"});
-    const peak=good.reduce((a,b)=>num(b.sessions)>num(a.sessions)?b:a,good[0]);
-    const idx=good.indexOf(peak);
-    element("circle",{cx:px(idx),cy:py(num(peak.sessions)),r:5,fill:"#ffb600",stroke:"#fff","stroke-width":2});
-    const mark=element("text",{x:Math.min(W-95,Math.max(L+5,px(idx)+9)),y:Math.max(T+9,py(num(peak.sessions))-12)});mark.textContent=nf.format(num(peak.sessions));
-    [0,Math.floor((good.length-1)/2),good.length-1].forEach(i=>{
-      const lab=element("text",{x:px(i),y:H-14,"text-anchor":i===0?"start":i===good.length-1?"end":"middle"});
-      lab.textContent=dateFmt(good[i].date);
-    });
-    set("#trendMin","Promedio diario: "+nf1.format(good.reduce((s,v)=>s+num(v.sessions),0)/good.length)+" sesiones");
-    set("#trendMax","Día de mayor actividad: "+dateFmt(peak.date)+" ("+nf.format(num(peak.sessions))+")");
-  }
-  function insight(root,heading,body){
-    const wrap=document.createElement("div");wrap.className="insight";
-    const h=document.createElement("strong");h.textContent=heading;
-    const s=document.createElement("span");s.textContent=body;wrap.append(h,s);root.append(wrap);
-  }
-  const countriesES={"Venezuela":"Venezuela","Chile":"Chile","United States":"Estados Unidos","China":"China","Ecuador":"Ecuador","Colombia":"Colombia","Australia":"Australia","Mexico":"México","Canada":"Canadá","Dominican Republic":"República Dominicana","Germany":"Alemania","Paraguay":"Paraguay","Netherlands":"Países Bajos","Russia":"Rusia","Sweden":"Suecia","Argentina":"Argentina","Iran":"Irán","Singapore":"Singapur","Spain":"España"};
-  const devES={"desktop":"Escritorio","mobile":"Móvil","tablet":"Tableta","smart tv":"Televisor inteligente"};
-  const channelES={"Direct":"Directo","Organic Search":"Búsqueda orgánica","Referral":"Referencias","Organic Social":"Redes sociales","Unassigned":"Sin asignar"};
-  function bars(container,rows,label,total,maxBar){
-    container.replaceChildren();
-    const max=Math.max(1,...rows.map(v=>num(v.sessions)));
-    rows.forEach(x=>{
-      const item=document.createElement("div");
-      const header=document.createElement("div");header.className="bar-heading";
-      const name=document.createElement("span");name.textContent=label(x);
-      const value=document.createElement("span");value.className="figure";value.textContent=nf.format(num(x.sessions))+" · "+pct(num(x.sessions)/Math.max(1,total));
-      header.append(name,value);
-      const track=document.createElement("div");track.className="track";
-      const fill=document.createElement("div");fill.className="fill";fill.style.width=Math.max(0,Math.min(100,num(x.sessions)/max*100))+"%";
-      track.append(fill);item.append(header,track);container.append(item);
-    });
-  }
-  function load(data){
-    if(!data||!data.period||!data.previous_period||!Array.isArray(data.countries)||!Array.isArray(data.daily))throw new Error("Estructura de datos no válida");
-    const current=data.period,prev=data.previous_period;
-    set("#periodChip",dateFmt(data.date_from)+" – "+dateFmt(data.date_to)+" de "+data.date_to.slice(0,4));
-    set("#summaryIntro","Actividad registrada entre el "+dateFmt(data.date_from)+" y el "+dateFmt(data.date_to)+". Comparación contra los 30 días anteriores.");
-    for(const [s,k] of [["#kUsers","active_users"],["#kSessions","sessions"],["#kViews","screen_page_views"]])set(s,nf.format(num(current[k])));
-    set("#kRate",pct(num(current.engagement_rate)));
-    for(const [s,k] of [["#dUsers","active_users"],["#dSessions","sessions"],["#dViews","screen_page_views"]]){
-      const el=$(s);el.textContent=delta(current[k],prev[k]);el.classList.toggle("delta-up",num(current[k])>num(prev[k]));el.classList.toggle("delta-down",num(current[k])<num(prev[k]));
-    }
-    set("#dRate",delta(current.engagement_rate,prev.engagement_rate,"rate"));
-    trend(data.daily);
-    const countries=data.countries.filter(x=>x.country&&num(x.sessions)>0).sort((a,b)=>num(b.sessions)-num(a.sessions));
-    const totalCountries=countries.reduce((s,x)=>s+num(x.sessions),0);
-    const leading=countries.slice(0,5);
-    const other=countries.slice(5).reduce((s,x)=>s+num(x.sessions),0);
-    const grouped=other>0?[...leading,{country:"Otros países",sessions:other}]:leading;
-    bars($("#countryList"),grouped,x=>countriesES[x.country]||x.country,totalCountries);
-    const devices=data.devices.filter(x=>num(x.sessions)>0).sort((a,b)=>num(b.sessions)-num(a.sessions));
-    const totalDevices=devices.reduce((s,x)=>s+num(x.sessions),0);
-    const desktop=num(devices.find(x=>x.devicecategory==="desktop")?.sessions||0);
-    const mobile=num(devices.find(x=>x.devicecategory==="mobile")?.sessions||0);
-    const otherDevices=Math.max(0,totalDevices-desktop-mobile);
-    const a=desktop/Math.max(1,totalDevices)*100,b=mobile/Math.max(1,totalDevices)*100;
-    $("#deviceDonut").style.background="conic-gradient(#00205b 0 "+a+"%,#007b85 "+a+"% "+(a+b)+"%,#70ad47 "+(a+b)+"% 100%)";
-    $("#deviceDonut").setAttribute("aria-label","Escritorio "+pct(desktop/totalDevices)+", móvil "+pct(mobile/totalDevices)+", otros "+pct(otherDevices/totalDevices));
-    const legend=$("#deviceLegend");legend.replaceChildren();
-    [["Escritorio",desktop,"#00205b"],["Móvil",mobile,"#007b85"],["Otros",otherDevices,"#70ad47"]].forEach(([name,count,color])=>{
-      const row=document.createElement("div");row.className="legend-row";
-      const sw=document.createElement("span");sw.className="swatch";sw.style.background=color;
-      const txt=document.createElement("span");txt.textContent=name;
-      const n=document.createElement("strong");n.textContent=pct(num(count)/Math.max(1,totalDevices));
-      row.append(sw,txt,n);legend.append(row);
-    });
-    const channels=data.channels.filter(x=>num(x.sessions)>0).sort((a,b)=>num(b.sessions)-num(a.sessions));
-    const sum=channels.reduce((s,x)=>s+num(x.sessions),0);
-    bars($("#channelList"),channels,x=>channelES[x.session_default_channel_group]||x.session_default_channel_group,sum);
-    const picks=[["Direct","Directo"],["Organic Search","Búsquedas"],["Referral","Referencias"]];
-    const cards=$("#channelSummary");cards.replaceChildren();
-    picks.forEach(([id,title])=>{
-      const n=num(channels.find(x=>x.session_default_channel_group===id)?.sessions||0);
-      const card=document.createElement("div");card.className="mini-card";
-      const s=document.createElement("span");s.textContent=title;
-      const strong=document.createElement("strong");strong.textContent=pct(n/Math.max(1,sum));
-      card.append(s,strong);cards.append(card);
-    });
-    const ins=$("#insightList");ins.replaceChildren();
-    if(countries.length)insight(ins,(countriesES[countries[0].country]||countries[0].country)+" es el principal origen",pct(num(countries[0].sessions)/Math.max(1,totalCountries))+" de las sesiones identificadas por país.");
-    insight(ins,"Escritorio y móvil tienen peso relevante",pct(desktop/Math.max(1,totalDevices))+" en escritorio y "+pct(mobile/Math.max(1,totalDevices))+" en móvil.");
-    const search=num(channels.find(x=>x.session_default_channel_group==="Organic Search")?.sessions||0);
-    insight(ins,"Accesos directos y búsquedas",pct((search+num(channels.find(x=>x.session_default_channel_group==="Direct")?.sessions||0))/Math.max(1,sum))+" de las sesiones provienen de ambos canales combinados.");
-    set("#generatedLabel","Instantánea obtenida el "+dateFmt(data.generated_on)+" · GA4, propiedad "+data.property_id);
-    set("#timezoneDetail","La propiedad GA4 registra aún los informes en "+(data.source_timezone||"su zona actual")+". Zona objetivo para Chile: America/Santiago (cambio pendiente en Administrador). Los períodos de esta instantánea siguen la zona original.");
-    if(data.external_report_url?.startsWith("https://lookerstudio.google.com/")){
-      $("#reportTopLink").href=data.external_report_url;
-      $("#originalReportLink").href=data.external_report_url;
-    }
-    $("#dataError").hidden=true;
-  }
-  async function loadHistorical(){
-    try{
-      const response=await fetch("./historico-web-ga4.json",{cache:"no-store"});
-      if(!response.ok)throw Error("HTTP "+response.status);
-      const data=await response.json(),site=data.site_summary;
-      if(!site||data.measured_hostname!=="www.movidasst.com")throw Error("Histórico inesperado");
-      set("#hUsers",nf.format(num(site.active_users)));
-      set("#hSessions",nf.format(num(site.sessions)));
-      set("#hViews",nf.format(num(site.screen_page_views)));
-      set("#hRate",pct(num(site.engagement_rate)));
-      set("#hIntro","Desde el "+dateFmt(data.date_from)+" hasta el "+dateFmt(data.date_to)+" de "+data.date_to.slice(0,4)+". Son visitas medidas en la web principal, recuperadas de su propiedad GA4 original.");
-      const countries=(data.countries||[]).filter(x=>x.country && x.country!=="(not set)").sort((a,b)=>num(b.sessions)-num(a.sessions));
-      const countryTotal=countries.reduce((v,x)=>v+num(x.sessions),0);
-      const other=countries.slice(5).reduce((v,x)=>v+num(x.sessions),0);
-      bars($("#hCountries"),other>0?[...countries.slice(0,5),{country:"Otros países",sessions:other}]:countries.slice(0,5),x=>countriesES[x.country]||x.country,countryTotal);
-      const devices=(data.devices||[]).sort((a,b)=>num(b.sessions)-num(a.sessions));
-      bars($("#hDevices"),devices,x=>devES[x.devicecategory]||x.devicecategory,devices.reduce((v,x)=>v+num(x.sessions),0));
-      const channels=(data.channels||[]).sort((a,b)=>num(b.sessions)-num(a.sessions));
-      bars($("#hChannels"),channels,x=>channelES[x.session_default_channel_group]||x.session_default_channel_group,channels.reduce((v,x)=>v+num(x.sessions),0));
-      const groups={};
-      (data.daily||[]).forEach(x=>{const key=String(x.date||"").slice(0,7);if(/^2025-\d{2}$/.test(key))groups[key]=(groups[key]||0)+num(x.sessions)});
-      const months=Object.keys(groups).sort().map(m=>({month:m,sessions:groups[m]}));
-      bars($("#hMonths"),months,x=>new Intl.DateTimeFormat("es-CL",{month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(x.month+"-01T00:00:00Z")),months.reduce((v,x)=>v+x.sessions,0));
-      $("#hError").hidden=true;
-    }catch(error){
-      console.warn("Histórico web no disponible",error);
-      $("#hError").hidden=false;
-    }
-  }
-  async function refresh(){
-    try{
-      const response=await fetch("./snapshot-ga4.json",{cache:"no-store"});
-      if(!response.ok)throw new Error("HTTP "+response.status);
-      load(await response.json());
-    }catch(error){
-      console.warn("No se pudo cargar instantánea GA4",error);
-      $("#dataError").hidden=false;
-      set("#summaryIntro","No se pudo cargar la instantánea de GA4. Revisa la conexión o abre el reporte original.");
-    }
-  }
-  function activate(name,scroll){
-    if(!["resumen","audiencia","origen","historico","fuentes"].includes(name))return;
-    $$("[data-panel]").forEach(x=>x.hidden=x.dataset.panel!==name);
-    $$("button[data-view]").forEach(x=>x.setAttribute("aria-selected",String(x.dataset.view===name)));
-    if(scroll && window.scrollY>140)window.scrollTo({top:0,behavior:"smooth"});
-  }
-  $$("button[data-view]").forEach(b=>b.addEventListener("click",()=>activate(b.dataset.view,true)));
-  $("#retryData").addEventListener("click",()=>{refresh();loadHistorical();});
-  activate(new URLSearchParams(location.search).get("vista")||"resumen",false);
-  refresh();
-  loadHistorical();
+(function(){
+"use strict";
+var f=new Intl.NumberFormat("es-CL",{maximumFractionDigits:0});
+var f1=new Intl.NumberFormat("es-CL",{maximumFractionDigits:1,minimumFractionDigits:1});
+var $=function(selector){return document.querySelector(selector)};
+var $$=function(selector){return Array.from(document.querySelectorAll(selector))};
+var n=function(v){return Number.isFinite(Number(v))?Number(v):0};
+var p=function(x){return f1.format(x*100)+" %"};
+var countryNames={"Venezuela":"Venezuela","Chile":"Chile","United States":"Estados Unidos","China":"China","Colombia":"Colombia","Peru":"Perú","Ecuador":"Ecuador","Mexico":"México","Argentina":"Argentina","Australia":"Australia","Spain":"España","Dominican Republic":"República Dominicana","Netherlands":"Países Bajos","Germany":"Alemania","United Kingdom":"Reino Unido","Bolivia":"Bolivia","Canada":"Canadá","Panama":"Panamá","Brazil":"Brasil","Türkiye":"Turquía","Paraguay":"Paraguay","Uruguay":"Uruguay","Costa Rica":"Costa Rica","El Salvador":"El Salvador","Singapore":"Singapur"};
+var deviceNames={"desktop":"Escritorio","mobile":"Móvil","tablet":"Tableta","smart tv":"Televisor"};
+var channelNames={"Direct":"Directo","Organic Search":"Búsqueda orgánica","Referral":"Referencias","Organic Social":"Redes sociales","Organic Video":"Video","Paid Social":"Publicidad social","AI Assistant":"Asistentes de IA","Unassigned":"Otros"};
+var palette=["#00205b","#007b85","#70ad47","#ffb600","#6e8ac6","#c2d0e1"];
+function labelCountry(x){return countryNames[x]||x}
+function labelDevice(x){return deviceNames[x]||x}
+function labelChannel(x){return channelNames[x]||x}
+function set(sel,value){var e=$(sel);if(e)e.textContent=value}
+function currentPage(name){
+ if(!["general","paises","dispositivos","canales"].includes(name))return;
+ $$("[data-view]").forEach(function(el){el.hidden=el.dataset.view!==name});
+ $$("button[data-page]").forEach(function(el){el.setAttribute("aria-selected",String(el.dataset.page===name))});
+ if(window.scrollY>120)window.scrollTo({top:0,behavior:"smooth"});
+}
+$$("button[data-page]").forEach(function(b){b.addEventListener("click",function(){currentPage(b.dataset.page)})});
+function rows(selector,items,title,total,limit){
+ var target=$(selector);if(!target)return;target.replaceChildren();
+ var shown=items.slice(0,limit||items.length),max=Math.max(1,...shown.map(function(x){return n(x.sessions)}));
+ shown.forEach(function(x){
+   var item=document.createElement("div");item.className="rank";
+   var line=document.createElement("div");line.className="rankline";
+   var left=document.createElement("span");left.className="rankname";left.textContent=title(x);
+   var right=document.createElement("span");right.className="ranknum";right.textContent=f.format(n(x.sessions))+" · "+p(n(x.sessions)/Math.max(1,total));
+   line.append(left,right);
+   var track=document.createElement("div");track.className="track";var fill=document.createElement("div");fill.className="fill";fill.style.width=(n(x.sessions)/max*100)+"%";track.append(fill);item.append(line,track);target.append(item);
+ });
+}
+function monthly(months){
+ var root=$("#monthlyChart");root.replaceChildren();
+ var arr=months.slice(-12),max=Math.max(1,...arr.map(function(x){return n(x.sessions)}));
+ arr.forEach(function(x,i){
+   var col=document.createElement("div");col.className="monthbar";
+   var v=document.createElement("span");v.className="value";v.textContent=i%2===0?f.format(x.sessions):"";
+   var b=document.createElement("div");b.className="bar";b.style.height=(Math.max(2,n(x.sessions)/max*160))+"px";
+   var cap=document.createElement("span");cap.className="axis";
+   var y=String(x.month||"").split("-"),month=Number(y[1])-1;
+   cap.textContent=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"][month]||"";
+   col.title=x.month+": "+f.format(n(x.sessions))+" sesiones";
+   col.append(v,b,cap);root.append(col);
+ });
+ root.setAttribute("aria-label",arr.map(function(x){return x.month+" "+f.format(n(x.sessions))+" sesiones"}).join("; "));
+}
+function render(data){
+ if(!data||!data.total||!data.countries||!data.devices||!data.channels||!data.monthly)throw Error("Sin estadísticas");
+ var total=data.total;
+ set("#totalUsers",f.format(n(total.users)));
+ set("#totalSessions",f.format(n(total.sessions)));
+ set("#totalViews",f.format(n(total.views)));
+ set("#totalEngagement",p(n(total.engagement_rate)));
+ if(data.date_to)set("#period","Acumulado · "+String(data.date_from).slice(0,4)+"–"+String(data.date_to).slice(0,4));
+ monthly(data.monthly);
+ var countries=data.countries.filter(function(x){return x.name&&!["(not set)","Sin especificar",""].includes(x.name)}).sort(function(a,b){return n(b.sessions)-n(a.sessions)});
+ var countrySum=countries.reduce(function(s,x){return s+n(x.sessions)},0);
+ var sliced=countries.slice(0,10),other=countries.slice(10).reduce(function(s,x){return s+n(x.sessions)},0);
+ var topCountries=other?[...sliced,{name:"Otros países",sessions:other}]:sliced;
+ rows("#countryBars",topCountries,function(x){return labelCountry(x.name)},countrySum);
+ set("#leaderCountry",labelCountry(countries[0]?.name||"—"));
+ set("#leaderCountrySessions",f.format(n(countries[0]?.sessions)));
+ set("#countCountries",f.format(countries.length));
+ var devices=data.devices.slice().sort(function(a,b){return n(b.sessions)-n(a.sessions)});
+ var deviceSum=devices.reduce(function(s,x){return s+n(x.sessions)},0);
+ rows("#deviceBars",devices,function(x){return labelDevice(x.name)},deviceSum);
+ var start=0,segments=[];
+ devices.forEach(function(x,i){var end=start+(n(x.sessions)/Math.max(1,deviceSum)*100);segments.push(palette[i%palette.length]+" "+start+"% "+end+"%");start=end});
+ $("#deviceDonut").style.background="conic-gradient("+segments.join(",")+")";
+ $("#deviceDonut").setAttribute("aria-label",devices.map(function(x){return labelDevice(x.name)+" "+p(n(x.sessions)/deviceSum)}).join(", "));
+ var legend=$("#deviceLegend");legend.replaceChildren();
+ devices.forEach(function(x,i){
+   var item=document.createElement("div");item.className="legenditem";
+   var sw=document.createElement("span");sw.className="swatch";sw.style.background=palette[i%palette.length];
+   var title=document.createElement("span");title.textContent=labelDevice(x.name);
+   var val=document.createElement("strong");val.className="legendval";val.textContent=p(n(x.sessions)/Math.max(1,deviceSum));
+   item.append(sw,title,val);legend.append(item);
+ });
+ var channels=data.channels.slice().sort(function(a,b){return n(b.sessions)-n(a.sessions)});
+ var channelSum=channels.reduce(function(s,x){return s+n(x.sessions)},0);
+ rows("#channelBars",channels,function(x){return labelChannel(x.name)},channelSum);
+ var channel=function(name){return n(channels.find(function(x){return x.name===name})?.sessions)};
+ set("#directP",p(channel("Direct")/Math.max(1,channelSum)));
+ set("#searchP",p(channel("Organic Search")/Math.max(1,channelSum)));
+ set("#refP",p(channel("Referral")/Math.max(1,channelSum)));
+ var highlights=$("#highlights");highlights.replaceChildren();
+ var items=[["Principal país",labelCountry(countries[0]?.name||"—")],["Segundo país",labelCountry(countries[1]?.name||"—")],["Dispositivo más usado",labelDevice(devices[0]?.name||"—")],["Canal principal",labelChannel(channels[0]?.name||"—")]];
+ items.forEach(function(r){var div=document.createElement("div");div.className="insight";var k=document.createElement("b");k.textContent=r[0];var v=document.createElement("strong");v.textContent=r[1];div.append(k,v);highlights.append(div)});
+}
+fetch("./resumen-ecosistema.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("Error del informe");return r.json()}).then(render).catch(function(e){console.warn("No fue posible cargar estadísticas",e)});
+var initial=new URLSearchParams(location.search).get("pestana");currentPage(["general","paises","dispositivos","canales"].includes(initial)?initial:"general");
 })();
 </script>
 <script defer src="https://www.movidasst.com/analytics.js?v=20261025-ga4com2"></script>

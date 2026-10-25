@@ -1,10 +1,10 @@
 {
   "version": 1,
   "revisado_el": "2026-10-25",
-  "propiedad_ga4": "401557991",
-  "flujo_actual": "Mi Moodle",
-  "measurement_id": "G-D0YXTL06LN",
-  "script_central": "https://www.movidasst.com/analytics.js?v=20261025",
+  "propiedad_ga4": "414669681",
+  "flujo_actual": "Movidasst",
+  "measurement_id": "G-WQMF05XMJL",
+  "script_central": "https://www.movidasst.com/analytics.js?v=20261025-ga4com2",
   "css_central": "https://www.movidasst.com/analytics.css?v=20261025",
   "tratamiento": "consentimiento explícito, no se carga GA4 antes de la aceptación; los page_view usan solo hostname sin query ni datos de perfiles",
   "estado_de_despliegue": "código instalado y comprobado en repositorios; no equivale a confirmar recepción de eventos en GA4",
@@ -468,5 +468,7 @@
       ],
       "estado": "etiqueta_instalada_en_git"
     }
-  ]
+  ],
+  "propiedad_moodle_no_incluida": "401557991 (G-D0YXTL06LN)",
+  "nota_historico": "La propiedad 414669681 dispone de datos de www.movidasst.com entre el 25 de julio y el 30 de diciembre de 2025. No consta actividad de www.movidasst.com posterior en esa propiedad hasta el 24 de octubre de 2026. La instrumentación de los 57 subdominios no valida aún nuevos eventos."
 }

@@ -135,7 +135,7 @@
     .channel-summary{gap:7px}
     .mini-card{padding:11px 8px}.mini-card strong{font-size:1.15rem}
     .donut{width:136px;height:136px;flex-basis:136px}.donut::after{width:85px;height:85px}
-    .bottom-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;position:fixed;z-index:50;left:0;bottom:0;right:0;background:#00205b;padding:8px max(7px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(7px,env(safe-area-inset-left));box-shadow:0 -6px 25px rgba(0,32,91,.22)}
+    .bottom-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;position:fixed;z-index:50;left:0;bottom:0;right:0;background:#00205b;padding:8px max(7px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(7px,env(safe-area-inset-left));box-shadow:0 -6px 25px rgba(0,32,91,.22)}
     .bottom-nav button{border:0;border-radius:10px;background:transparent;color:#d5e9f6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:6px 3px;min-height:51px;font-size:.67rem;font-weight:800}
     .bottom-nav button[aria-selected="true"]{background:#ffffff27;color:#fff}
     .bottom-nav svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
@@ -171,12 +171,13 @@
 
 <main class="shell body" id="mainContent">
   <div class="notice" id="coverageNotice" role="note">
-    <span aria-hidden="true">ⓘ</span><p>Las cifras aún reflejan principalmente el Moodle (<b>movidasst.org</b>). Estamos comprobando la llegada de datos desde los subdominios recién instrumentados. <b>No son todavía el alcance total del ecosistema.</b></p>
+    <span aria-hidden="true">ⓘ</span><p>El corte reciente mide principalmente Moodle (<b>movidasst.org</b>). Recuperamos el histórico de <b>www.movidasst.com (julio–diciembre de 2025)</b> en otra propiedad. Los 57 subdominios requieren validar sus nuevos datos; no sumamos usuarios ni confundimos períodos.</p>
   </div>
   <nav class="navtabs" aria-label="Secciones del observatorio">
     <button type="button" data-view="resumen" aria-controls="vista-resumen" aria-selected="true">▦ Resumen</button>
     <button type="button" data-view="audiencia" aria-controls="vista-audiencia" aria-selected="false">◉ Audiencia</button>
     <button type="button" data-view="origen" aria-controls="vista-origen" aria-selected="false">↗ Canales</button>
+    <button type="button" data-view="historico" aria-controls="vista-historico" aria-selected="false">◷ Histórico web</button>
     <button type="button" data-view="fuentes" aria-controls="vista-fuentes" aria-selected="false">ⓘ Fuentes</button>
   </nav>
 
@@ -235,15 +236,35 @@
     </article>
   </section>
 
+  <section class="view" id="vista-historico" data-panel="historico" aria-label="Histórico de la web principal" hidden>
+    <h2>Histórico recuperado · www.movidasst.com</h2>
+    <p class="lead" id="hIntro">Preparando información de la web principal.</p>
+    <div class="notice"><span aria-hidden="true">ⓘ</span><p><b>Período histórico, no actual.</b> La última actividad identificada de www.movidasst.com es del <b>30 de diciembre de 2025</b>. No refleja las visitas de 2026.</p></div>
+    <div class="kpi">
+      <article class="stat"><span class="k-label">Usuarios activos</span><strong class="k-value" id="hUsers">—</strong><span class="k-delta">Histórico web principal</span></article>
+      <article class="stat"><span class="k-label">Sesiones</span><strong class="k-value" id="hSessions">—</strong><span class="k-delta">Histórico web principal</span></article>
+      <article class="stat"><span class="k-label">Vistas</span><strong class="k-value" id="hViews">—</strong><span class="k-delta">Histórico web principal</span></article>
+      <article class="stat"><span class="k-label">Interacción</span><strong class="k-value" id="hRate">—</strong><span class="k-delta">Histórico web principal</span></article>
+    </div>
+    <div class="section-grid">
+      <article class="panel"><div class="panel-head"><div><h2>Países</h2><p>Sesiones históricas</p></div></div><div class="bar-list" id="hCountries"></div></article>
+      <article class="panel"><div class="panel-head"><div><h2>Dispositivos</h2><p>Sesiones históricas</p></div></div><div class="bar-list" id="hDevices"></div></article>
+      <article class="panel"><div class="panel-head"><div><h2>Evolución mensual</h2><p>Actividad de julio a diciembre de 2025</p></div></div><div class="bar-list" id="hMonths"></div></article>
+      <article class="panel"><div class="panel-head"><div><h2>Canales</h2><p>Fuentes de tráfico históricas</p></div></div><div class="bar-list" id="hChannels"></div></article>
+    </div>
+    <p class="panel-note">Fuente: GA4, propiedad 414669681 (llamada «movidasst.org», pero con datos de www.movidasst.com). Los KPI principales están filtrados por hostname. Los desgloses de audiencia contienen un volumen mínimo de otros hosts.</p>
+    <p class="lead" id="hError" hidden>No se pudo cargar el histórico.</p>
+  </section>
+
   <section class="view" id="vista-fuentes" data-panel="fuentes" aria-label="Fuentes y metodología" hidden>
     <h2>Transparencia de los datos</h2>
     <p class="lead">Queremos compartir resultados verificables, sin inflar el alcance de la comunidad ni confundir diferentes indicadores.</p>
     <div class="section-grid">
       <article class="panel readable">
         <h3 class="small-head">Fuente y actualización</h3>
-        <p>Fuente: <strong>Google Analytics 4</strong>, propiedad <strong>Movidasst (401557991)</strong>, consultada a través de Windsor.ai.</p>
+        <p>Fuente: <strong>Google Analytics 4</strong> vía Windsor.ai. El período reciente corresponde a <strong>Movidasst (401557991)</strong>, que mide Moodle. La web principal tiene un histórico separado en la propiedad <strong>movidasst.org (414669681)</strong>.</p>
         <p>Las cifras visibles son una <strong>instantánea fechada</strong>, no una conexión en directo desde esta página a una API privada. «Volver a leer el corte» recarga el archivo publicado, no solicita nuevos datos a GA4.</p>
-        <p id="timezoneDetail">Zona horaria actual de GA4: America/Los_Angeles. Objetivo: Chile (America/Santiago), pendiente de cambio en Administrador.</p>
+        <p id="timezoneDetail">La propiedad de la web principal ya usa America/Santiago. La propiedad que mide Moodle continúa configurada en America/Los_Angeles; debe modificarse en Administrador de GA4.</p>
         <a class="outline" id="originalReportLink" target="_blank" rel="noopener noreferrer" href="https://lookerstudio.google.com/reporting/a52dba2d-8ef2-4dc1-9c74-20a2993627fc/page/YWYSF">Abrir informe original de Looker Studio ↗</a>
       </article>
       <article class="panel">
@@ -258,7 +279,7 @@
       </article>
       <article class="panel readable">
         <h3 class="small-head">Cobertura del ecosistema</h3>
-        <p>Se añadió el código de medición a <strong>57 subdominios</strong>. Su aparición en los informes requiere publicación correcta, visitas con consentimiento y procesamiento de Analytics.</p>
+        <p>Se añadió la medición del flujo histórico web <strong>G-WQMF05XMJL</strong> a <strong>57 subdominios</strong>. Su aparición en los informes requiere publicación correcta, visitas con consentimiento y procesamiento de Analytics.</p>
         <p>Hasta validar esos eventos, los datos se presentan como <strong>tráfico medido por la propiedad GA4</strong>, no como la audiencia total de las 57 plataformas.</p>
         <a class="outline" href="https://github.com/movidasst/metricas/blob/main/cobertura-ga4.json" target="_blank" rel="noopener noreferrer">Consultar inventario técnico ↗</a>
       </article>
@@ -280,6 +301,7 @@
   <button type="button" data-view="resumen" aria-controls="vista-resumen" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Resumen</button>
   <button type="button" data-view="audiencia" aria-controls="vista-audiencia" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-4 5-4 13 0 18M12 3c4 5 4 13 0 18"/></svg>Audiencia</button>
   <button type="button" data-view="origen" aria-controls="vista-origen" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 18h16M4 18V4M7 14l4-4 3 2 5-6M16 6h3v3"/></svg>Canales</button>
+  <button type="button" data-view="historico" aria-controls="vista-historico" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 3 6.7M3 19v-6h6M12 7v5l3 2"/></svg>Histórico</button>
   <button type="button" data-view="fuentes" aria-controls="vista-fuentes" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg>Fuentes</button>
 </nav>
 <script>
@@ -419,6 +441,35 @@
     }
     $("#dataError").hidden=true;
   }
+  async function loadHistorical(){
+    try{
+      const response=await fetch("./historico-web-ga4.json",{cache:"no-store"});
+      if(!response.ok)throw Error("HTTP "+response.status);
+      const data=await response.json(),site=data.site_summary;
+      if(!site||data.measured_hostname!=="www.movidasst.com")throw Error("Histórico inesperado");
+      set("#hUsers",nf.format(num(site.active_users)));
+      set("#hSessions",nf.format(num(site.sessions)));
+      set("#hViews",nf.format(num(site.screen_page_views)));
+      set("#hRate",pct(num(site.engagement_rate)));
+      set("#hIntro","Desde el "+dateFmt(data.date_from)+" hasta el "+dateFmt(data.date_to)+" de "+data.date_to.slice(0,4)+". Son visitas medidas en la web principal, recuperadas de su propiedad GA4 original.");
+      const countries=(data.countries||[]).filter(x=>x.country && x.country!=="(not set)").sort((a,b)=>num(b.sessions)-num(a.sessions));
+      const countryTotal=countries.reduce((v,x)=>v+num(x.sessions),0);
+      const other=countries.slice(5).reduce((v,x)=>v+num(x.sessions),0);
+      bars($("#hCountries"),other>0?[...countries.slice(0,5),{country:"Otros países",sessions:other}]:countries.slice(0,5),x=>countriesES[x.country]||x.country,countryTotal);
+      const devices=(data.devices||[]).sort((a,b)=>num(b.sessions)-num(a.sessions));
+      bars($("#hDevices"),devices,x=>devES[x.devicecategory]||x.devicecategory,devices.reduce((v,x)=>v+num(x.sessions),0));
+      const channels=(data.channels||[]).sort((a,b)=>num(b.sessions)-num(a.sessions));
+      bars($("#hChannels"),channels,x=>channelES[x.session_default_channel_group]||x.session_default_channel_group,channels.reduce((v,x)=>v+num(x.sessions),0));
+      const groups={};
+      (data.daily||[]).forEach(x=>{const key=String(x.date||"").slice(0,7);if(/^2025-\d{2}$/.test(key))groups[key]=(groups[key]||0)+num(x.sessions)});
+      const months=Object.keys(groups).sort().map(m=>({month:m,sessions:groups[m]}));
+      bars($("#hMonths"),months,x=>new Intl.DateTimeFormat("es-CL",{month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(x.month+"-01T00:00:00Z")),months.reduce((v,x)=>v+x.sessions,0));
+      $("#hError").hidden=true;
+    }catch(error){
+      console.warn("Histórico web no disponible",error);
+      $("#hError").hidden=false;
+    }
+  }
   async function refresh(){
     try{
       const response=await fetch("./snapshot-ga4.json",{cache:"no-store"});
@@ -431,15 +482,16 @@
     }
   }
   function activate(name,scroll){
-    if(!["resumen","audiencia","origen","fuentes"].includes(name))return;
+    if(!["resumen","audiencia","origen","historico","fuentes"].includes(name))return;
     $$("[data-panel]").forEach(x=>x.hidden=x.dataset.panel!==name);
     $$("button[data-view]").forEach(x=>x.setAttribute("aria-selected",String(x.dataset.view===name)));
     if(scroll && window.scrollY>140)window.scrollTo({top:0,behavior:"smooth"});
   }
   $$("button[data-view]").forEach(b=>b.addEventListener("click",()=>activate(b.dataset.view,true)));
-  $("#retryData").addEventListener("click",refresh);
+  $("#retryData").addEventListener("click",()=>{refresh();loadHistorical();});
   activate(new URLSearchParams(location.search).get("vista")||"resumen",false);
   refresh();
+  loadHistorical();
 })();
 </script>
 <script defer src="https://www.movidasst.com/analytics.js?v=20261025-ga4com2"></script>

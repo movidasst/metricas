@@ -1,0 +1,1029 @@
+{
+  "schema_version": 1,
+  "source": "Google Analytics 4 via Windsor.ai",
+  "report_name": "Histórico de la web principal",
+  "property_id": "414669681",
+  "property_name": "movidasst.org",
+  "measurement_id": "G-WQMF05XMJL",
+  "stream_name": "Movidasst",
+  "property_timezone": "America/Santiago",
+  "measured_hostname": "www.movidasst.com",
+  "date_from": "2025-07-25",
+  "date_to": "2025-12-30",
+  "generated_on": "2026-10-25",
+  "is_historical": true,
+  "is_live": false,
+  "site_summary": {
+    "hostname": "www.movidasst.com",
+    "active_users": 2589,
+    "sessions": 6498,
+    "screen_page_views": 15848,
+    "engaged_sessions": 3568,
+    "engagement_rate": 0.5491
+  },
+  "unattributed_other_hosts": [
+    {
+      "hostname": "sites.google.com",
+      "active_users": 8,
+      "sessions": 14,
+      "screen_page_views": 47,
+      "engaged_sessions": 10,
+      "engagement_rate": 0.7143
+    }
+  ],
+  "countries": [
+    {
+      "country": "Venezuela",
+      "sessions": 4482
+    },
+    {
+      "country": "Chile",
+      "sessions": 651
+    },
+    {
+      "country": "United States",
+      "sessions": 258
+    },
+    {
+      "country": "Colombia",
+      "sessions": 198
+    },
+    {
+      "country": "Peru",
+      "sessions": 177
+    },
+    {
+      "country": "Argentina",
+      "sessions": 142
+    },
+    {
+      "country": "Ecuador",
+      "sessions": 126
+    },
+    {
+      "country": "Mexico",
+      "sessions": 106
+    },
+    {
+      "country": "China",
+      "sessions": 47
+    },
+    {
+      "country": "Singapore",
+      "sessions": 42
+    },
+    {
+      "country": "Netherlands",
+      "sessions": 34
+    },
+    {
+      "country": "Spain",
+      "sessions": 27
+    },
+    {
+      "country": "Paraguay",
+      "sessions": 25
+    },
+    {
+      "country": "Nicaragua",
+      "sessions": 22
+    },
+    {
+      "country": "Dominican Republic",
+      "sessions": 20
+    },
+    {
+      "country": "Bolivia",
+      "sessions": 19
+    },
+    {
+      "country": "El Salvador",
+      "sessions": 19
+    },
+    {
+      "country": "Costa Rica",
+      "sessions": 17
+    },
+    {
+      "country": "Ireland",
+      "sessions": 12
+    },
+    {
+      "country": "Brazil",
+      "sessions": 9
+    },
+    {
+      "country": "Canada",
+      "sessions": 9
+    },
+    {
+      "country": "Guatemala",
+      "sessions": 9
+    },
+    {
+      "country": "Panama",
+      "sessions": 9
+    },
+    {
+      "country": "Honduras",
+      "sessions": 5
+    },
+    {
+      "country": "Sweden",
+      "sessions": 5
+    },
+    {
+      "country": "Uruguay",
+      "sessions": 5
+    },
+    {
+      "country": "(not set)",
+      "sessions": 4
+    },
+    {
+      "country": "Japan",
+      "sessions": 4
+    },
+    {
+      "country": "Poland",
+      "sessions": 4
+    },
+    {
+      "country": "Saudi Arabia",
+      "sessions": 4
+    },
+    {
+      "country": "France",
+      "sessions": 2
+    },
+    {
+      "country": "Iraq",
+      "sessions": 2
+    },
+    {
+      "country": "Romania",
+      "sessions": 2
+    },
+    {
+      "country": "Bangladesh",
+      "sessions": 1
+    },
+    {
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "country": "Hong Kong",
+      "sessions": 1
+    },
+    {
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "country": "Indonesia",
+      "sessions": 1
+    },
+    {
+      "country": "Italy",
+      "sessions": 1
+    },
+    {
+      "country": "United Kingdom",
+      "sessions": 1
+    }
+  ],
+  "devices": [
+    {
+      "devicecategory": "mobile",
+      "sessions": 4604
+    },
+    {
+      "devicecategory": "desktop",
+      "sessions": 1958
+    },
+    {
+      "devicecategory": "tablet",
+      "sessions": 9
+    }
+  ],
+  "channels": [
+    {
+      "session_default_channel_group": "Direct",
+      "sessions": 4625
+    },
+    {
+      "session_default_channel_group": "Organic Search",
+      "sessions": 1132
+    },
+    {
+      "session_default_channel_group": "Referral",
+      "sessions": 386
+    },
+    {
+      "session_default_channel_group": "Organic Social",
+      "sessions": 361
+    },
+    {
+      "session_default_channel_group": "Organic Video",
+      "sessions": 25
+    },
+    {
+      "session_default_channel_group": "Unassigned",
+      "sessions": 9
+    }
+  ],
+  "daily": [
+    {
+      "date": "2025-07-25",
+      "sessions": 21,
+      "screen_page_views": 25
+    },
+    {
+      "date": "2025-07-26",
+      "sessions": 48,
+      "screen_page_views": 80
+    },
+    {
+      "date": "2025-07-27",
+      "sessions": 46,
+      "screen_page_views": 106
+    },
+    {
+      "date": "2025-07-28",
+      "sessions": 44,
+      "screen_page_views": 112
+    },
+    {
+      "date": "2025-07-29",
+      "sessions": 45,
+      "screen_page_views": 94
+    },
+    {
+      "date": "2025-07-30",
+      "sessions": 32,
+      "screen_page_views": 49
+    },
+    {
+      "date": "2025-07-31",
+      "sessions": 44,
+      "screen_page_views": 93
+    },
+    {
+      "date": "2025-08-01",
+      "sessions": 13,
+      "screen_page_views": 24
+    },
+    {
+      "date": "2025-08-02",
+      "sessions": 20,
+      "screen_page_views": 25
+    },
+    {
+      "date": "2025-08-03",
+      "sessions": 33,
+      "screen_page_views": 47
+    },
+    {
+      "date": "2025-08-04",
+      "sessions": 33,
+      "screen_page_views": 82
+    },
+    {
+      "date": "2025-08-05",
+      "sessions": 37,
+      "screen_page_views": 155
+    },
+    {
+      "date": "2025-08-06",
+      "sessions": 44,
+      "screen_page_views": 103
+    },
+    {
+      "date": "2025-08-07",
+      "sessions": 55,
+      "screen_page_views": 116
+    },
+    {
+      "date": "2025-08-08",
+      "sessions": 57,
+      "screen_page_views": 135
+    },
+    {
+      "date": "2025-08-09",
+      "sessions": 74,
+      "screen_page_views": 193
+    },
+    {
+      "date": "2025-08-10",
+      "sessions": 81,
+      "screen_page_views": 367
+    },
+    {
+      "date": "2025-08-11",
+      "sessions": 62,
+      "screen_page_views": 234
+    },
+    {
+      "date": "2025-08-12",
+      "sessions": 44,
+      "screen_page_views": 178
+    },
+    {
+      "date": "2025-08-13",
+      "sessions": 41,
+      "screen_page_views": 153
+    },
+    {
+      "date": "2025-08-14",
+      "sessions": 28,
+      "screen_page_views": 76
+    },
+    {
+      "date": "2025-08-15",
+      "sessions": 23,
+      "screen_page_views": 76
+    },
+    {
+      "date": "2025-08-16",
+      "sessions": 30,
+      "screen_page_views": 89
+    },
+    {
+      "date": "2025-08-17",
+      "sessions": 26,
+      "screen_page_views": 80
+    },
+    {
+      "date": "2025-08-18",
+      "sessions": 129,
+      "screen_page_views": 247
+    },
+    {
+      "date": "2025-08-19",
+      "sessions": 88,
+      "screen_page_views": 247
+    },
+    {
+      "date": "2025-08-20",
+      "sessions": 152,
+      "screen_page_views": 336
+    },
+    {
+      "date": "2025-08-21",
+      "sessions": 101,
+      "screen_page_views": 182
+    },
+    {
+      "date": "2025-08-22",
+      "sessions": 72,
+      "screen_page_views": 163
+    },
+    {
+      "date": "2025-08-23",
+      "sessions": 42,
+      "screen_page_views": 89
+    },
+    {
+      "date": "2025-08-24",
+      "sessions": 34,
+      "screen_page_views": 60
+    },
+    {
+      "date": "2025-08-25",
+      "sessions": 119,
+      "screen_page_views": 293
+    },
+    {
+      "date": "2025-08-26",
+      "sessions": 159,
+      "screen_page_views": 401
+    },
+    {
+      "date": "2025-08-27",
+      "sessions": 135,
+      "screen_page_views": 458
+    },
+    {
+      "date": "2025-08-28",
+      "sessions": 51,
+      "screen_page_views": 197
+    },
+    {
+      "date": "2025-08-29",
+      "sessions": 37,
+      "screen_page_views": 58
+    },
+    {
+      "date": "2025-08-30",
+      "sessions": 17,
+      "screen_page_views": 37
+    },
+    {
+      "date": "2025-08-31",
+      "sessions": 31,
+      "screen_page_views": 82
+    },
+    {
+      "date": "2025-09-01",
+      "sessions": 66,
+      "screen_page_views": 237
+    },
+    {
+      "date": "2025-09-02",
+      "sessions": 64,
+      "screen_page_views": 245
+    },
+    {
+      "date": "2025-09-03",
+      "sessions": 32,
+      "screen_page_views": 70
+    },
+    {
+      "date": "2025-09-04",
+      "sessions": 45,
+      "screen_page_views": 82
+    },
+    {
+      "date": "2025-09-05",
+      "sessions": 127,
+      "screen_page_views": 295
+    },
+    {
+      "date": "2025-09-06",
+      "sessions": 39,
+      "screen_page_views": 94
+    },
+    {
+      "date": "2025-09-07",
+      "sessions": 40,
+      "screen_page_views": 74
+    },
+    {
+      "date": "2025-09-08",
+      "sessions": 72,
+      "screen_page_views": 147
+    },
+    {
+      "date": "2025-09-09",
+      "sessions": 34,
+      "screen_page_views": 103
+    },
+    {
+      "date": "2025-09-10",
+      "sessions": 54,
+      "screen_page_views": 170
+    },
+    {
+      "date": "2025-09-11",
+      "sessions": 55,
+      "screen_page_views": 174
+    },
+    {
+      "date": "2025-09-12",
+      "sessions": 23,
+      "screen_page_views": 43
+    },
+    {
+      "date": "2025-09-13",
+      "sessions": 11,
+      "screen_page_views": 31
+    },
+    {
+      "date": "2025-09-14",
+      "sessions": 11,
+      "screen_page_views": 38
+    },
+    {
+      "date": "2025-09-15",
+      "sessions": 52,
+      "screen_page_views": 144
+    },
+    {
+      "date": "2025-09-16",
+      "sessions": 65,
+      "screen_page_views": 162
+    },
+    {
+      "date": "2025-09-17",
+      "sessions": 40,
+      "screen_page_views": 161
+    },
+    {
+      "date": "2025-09-18",
+      "sessions": 57,
+      "screen_page_views": 169
+    },
+    {
+      "date": "2025-09-19",
+      "sessions": 33,
+      "screen_page_views": 72
+    },
+    {
+      "date": "2025-09-20",
+      "sessions": 14,
+      "screen_page_views": 20
+    },
+    {
+      "date": "2025-09-21",
+      "sessions": 19,
+      "screen_page_views": 30
+    },
+    {
+      "date": "2025-09-22",
+      "sessions": 12,
+      "screen_page_views": 30
+    },
+    {
+      "date": "2025-09-23",
+      "sessions": 51,
+      "screen_page_views": 93
+    },
+    {
+      "date": "2025-09-24",
+      "sessions": 34,
+      "screen_page_views": 41
+    },
+    {
+      "date": "2025-09-25",
+      "sessions": 21,
+      "screen_page_views": 30
+    },
+    {
+      "date": "2025-09-26",
+      "sessions": 12,
+      "screen_page_views": 27
+    },
+    {
+      "date": "2025-09-27",
+      "sessions": 14,
+      "screen_page_views": 15
+    },
+    {
+      "date": "2025-09-28",
+      "sessions": 20,
+      "screen_page_views": 38
+    },
+    {
+      "date": "2025-09-29",
+      "sessions": 31,
+      "screen_page_views": 86
+    },
+    {
+      "date": "2025-09-30",
+      "sessions": 74,
+      "screen_page_views": 177
+    },
+    {
+      "date": "2025-10-01",
+      "sessions": 113,
+      "screen_page_views": 311
+    },
+    {
+      "date": "2025-10-02",
+      "sessions": 55,
+      "screen_page_views": 125
+    },
+    {
+      "date": "2025-10-03",
+      "sessions": 52,
+      "screen_page_views": 98
+    },
+    {
+      "date": "2025-10-04",
+      "sessions": 41,
+      "screen_page_views": 142
+    },
+    {
+      "date": "2025-10-05",
+      "sessions": 47,
+      "screen_page_views": 117
+    },
+    {
+      "date": "2025-10-06",
+      "sessions": 89,
+      "screen_page_views": 259
+    },
+    {
+      "date": "2025-10-07",
+      "sessions": 62,
+      "screen_page_views": 159
+    },
+    {
+      "date": "2025-10-08",
+      "sessions": 36,
+      "screen_page_views": 81
+    },
+    {
+      "date": "2025-10-09",
+      "sessions": 38,
+      "screen_page_views": 94
+    },
+    {
+      "date": "2025-10-10",
+      "sessions": 44,
+      "screen_page_views": 91
+    },
+    {
+      "date": "2025-10-11",
+      "sessions": 34,
+      "screen_page_views": 99
+    },
+    {
+      "date": "2025-10-12",
+      "sessions": 35,
+      "screen_page_views": 86
+    },
+    {
+      "date": "2025-10-13",
+      "sessions": 24,
+      "screen_page_views": 59
+    },
+    {
+      "date": "2025-10-14",
+      "sessions": 58,
+      "screen_page_views": 101
+    },
+    {
+      "date": "2025-10-15",
+      "sessions": 55,
+      "screen_page_views": 133
+    },
+    {
+      "date": "2025-10-16",
+      "sessions": 21,
+      "screen_page_views": 36
+    },
+    {
+      "date": "2025-10-17",
+      "sessions": 21,
+      "screen_page_views": 39
+    },
+    {
+      "date": "2025-10-18",
+      "sessions": 28,
+      "screen_page_views": 62
+    },
+    {
+      "date": "2025-10-19",
+      "sessions": 88,
+      "screen_page_views": 170
+    },
+    {
+      "date": "2025-10-20",
+      "sessions": 87,
+      "screen_page_views": 183
+    },
+    {
+      "date": "2025-10-21",
+      "sessions": 98,
+      "screen_page_views": 265
+    },
+    {
+      "date": "2025-10-22",
+      "sessions": 107,
+      "screen_page_views": 187
+    },
+    {
+      "date": "2025-10-23",
+      "sessions": 72,
+      "screen_page_views": 138
+    },
+    {
+      "date": "2025-10-24",
+      "sessions": 92,
+      "screen_page_views": 179
+    },
+    {
+      "date": "2025-10-25",
+      "sessions": 45,
+      "screen_page_views": 121
+    },
+    {
+      "date": "2025-10-26",
+      "sessions": 35,
+      "screen_page_views": 90
+    },
+    {
+      "date": "2025-10-27",
+      "sessions": 66,
+      "screen_page_views": 209
+    },
+    {
+      "date": "2025-10-28",
+      "sessions": 55,
+      "screen_page_views": 88
+    },
+    {
+      "date": "2025-10-29",
+      "sessions": 33,
+      "screen_page_views": 75
+    },
+    {
+      "date": "2025-10-30",
+      "sessions": 40,
+      "screen_page_views": 113
+    },
+    {
+      "date": "2025-10-31",
+      "sessions": 20,
+      "screen_page_views": 36
+    },
+    {
+      "date": "2025-11-01",
+      "sessions": 13,
+      "screen_page_views": 26
+    },
+    {
+      "date": "2025-11-02",
+      "sessions": 19,
+      "screen_page_views": 42
+    },
+    {
+      "date": "2025-11-03",
+      "sessions": 28,
+      "screen_page_views": 69
+    },
+    {
+      "date": "2025-11-04",
+      "sessions": 50,
+      "screen_page_views": 121
+    },
+    {
+      "date": "2025-11-05",
+      "sessions": 45,
+      "screen_page_views": 145
+    },
+    {
+      "date": "2025-11-06",
+      "sessions": 56,
+      "screen_page_views": 142
+    },
+    {
+      "date": "2025-11-07",
+      "sessions": 25,
+      "screen_page_views": 44
+    },
+    {
+      "date": "2025-11-08",
+      "sessions": 32,
+      "screen_page_views": 79
+    },
+    {
+      "date": "2025-11-09",
+      "sessions": 14,
+      "screen_page_views": 46
+    },
+    {
+      "date": "2025-11-10",
+      "sessions": 30,
+      "screen_page_views": 97
+    },
+    {
+      "date": "2025-11-11",
+      "sessions": 55,
+      "screen_page_views": 134
+    },
+    {
+      "date": "2025-11-12",
+      "sessions": 52,
+      "screen_page_views": 108
+    },
+    {
+      "date": "2025-11-13",
+      "sessions": 28,
+      "screen_page_views": 94
+    },
+    {
+      "date": "2025-11-14",
+      "sessions": 33,
+      "screen_page_views": 59
+    },
+    {
+      "date": "2025-11-15",
+      "sessions": 41,
+      "screen_page_views": 70
+    },
+    {
+      "date": "2025-11-16",
+      "sessions": 30,
+      "screen_page_views": 45
+    },
+    {
+      "date": "2025-11-17",
+      "sessions": 31,
+      "screen_page_views": 50
+    },
+    {
+      "date": "2025-11-18",
+      "sessions": 55,
+      "screen_page_views": 191
+    },
+    {
+      "date": "2025-11-19",
+      "sessions": 50,
+      "screen_page_views": 180
+    },
+    {
+      "date": "2025-11-20",
+      "sessions": 34,
+      "screen_page_views": 60
+    },
+    {
+      "date": "2025-11-21",
+      "sessions": 41,
+      "screen_page_views": 72
+    },
+    {
+      "date": "2025-11-22",
+      "sessions": 9,
+      "screen_page_views": 10
+    },
+    {
+      "date": "2025-11-23",
+      "sessions": 25,
+      "screen_page_views": 84
+    },
+    {
+      "date": "2025-11-24",
+      "sessions": 52,
+      "screen_page_views": 120
+    },
+    {
+      "date": "2025-11-25",
+      "sessions": 38,
+      "screen_page_views": 78
+    },
+    {
+      "date": "2025-11-26",
+      "sessions": 50,
+      "screen_page_views": 136
+    },
+    {
+      "date": "2025-11-27",
+      "sessions": 22,
+      "screen_page_views": 35
+    },
+    {
+      "date": "2025-11-28",
+      "sessions": 10,
+      "screen_page_views": 14
+    },
+    {
+      "date": "2025-11-29",
+      "sessions": 12,
+      "screen_page_views": 22
+    },
+    {
+      "date": "2025-11-30",
+      "sessions": 9,
+      "screen_page_views": 42
+    },
+    {
+      "date": "2025-12-01",
+      "sessions": 12,
+      "screen_page_views": 34
+    },
+    {
+      "date": "2025-12-02",
+      "sessions": 25,
+      "screen_page_views": 42
+    },
+    {
+      "date": "2025-12-03",
+      "sessions": 22,
+      "screen_page_views": 62
+    },
+    {
+      "date": "2025-12-04",
+      "sessions": 27,
+      "screen_page_views": 100
+    },
+    {
+      "date": "2025-12-05",
+      "sessions": 18,
+      "screen_page_views": 31
+    },
+    {
+      "date": "2025-12-06",
+      "sessions": 11,
+      "screen_page_views": 20
+    },
+    {
+      "date": "2025-12-07",
+      "sessions": 7,
+      "screen_page_views": 15
+    },
+    {
+      "date": "2025-12-08",
+      "sessions": 60,
+      "screen_page_views": 145
+    },
+    {
+      "date": "2025-12-09",
+      "sessions": 14,
+      "screen_page_views": 25
+    },
+    {
+      "date": "2025-12-10",
+      "sessions": 20,
+      "screen_page_views": 73
+    },
+    {
+      "date": "2025-12-11",
+      "sessions": 22,
+      "screen_page_views": 31
+    },
+    {
+      "date": "2025-12-12",
+      "sessions": 18,
+      "screen_page_views": 26
+    },
+    {
+      "date": "2025-12-13",
+      "sessions": 16,
+      "screen_page_views": 30
+    },
+    {
+      "date": "2025-12-14",
+      "sessions": 4,
+      "screen_page_views": 19
+    },
+    {
+      "date": "2025-12-15",
+      "sessions": 14,
+      "screen_page_views": 40
+    },
+    {
+      "date": "2025-12-16",
+      "sessions": 8,
+      "screen_page_views": 27
+    },
+    {
+      "date": "2025-12-17",
+      "sessions": 9,
+      "screen_page_views": 13
+    },
+    {
+      "date": "2025-12-18",
+      "sessions": 17,
+      "screen_page_views": 32
+    },
+    {
+      "date": "2025-12-19",
+      "sessions": 21,
+      "screen_page_views": 29
+    },
+    {
+      "date": "2025-12-20",
+      "sessions": 8,
+      "screen_page_views": 11
+    },
+    {
+      "date": "2025-12-21",
+      "sessions": 11,
+      "screen_page_views": 12
+    },
+    {
+      "date": "2025-12-22",
+      "sessions": 14,
+      "screen_page_views": 28
+    },
+    {
+      "date": "2025-12-23",
+      "sessions": 7,
+      "screen_page_views": 12
+    },
+    {
+      "date": "2025-12-24",
+      "sessions": 2,
+      "screen_page_views": 2
+    },
+    {
+      "date": "2025-12-25",
+      "sessions": 3,
+      "screen_page_views": 3
+    },
+    {
+      "date": "2025-12-26",
+      "sessions": 3,
+      "screen_page_views": 3
+    },
+    {
+      "date": "2025-12-27",
+      "sessions": 12,
+      "screen_page_views": 19
+    },
+    {
+      "date": "2025-12-28",
+      "sessions": 8,
+      "screen_page_views": 10
+    },
+    {
+      "date": "2025-12-30",
+      "sessions": 1,
+      "screen_page_views": 0
+    }
+  ],
+  "disclaimer": "El flujo histórico cesó de registrar visitas a www.movidasst.com el 30-dic-2025; no cubre el tráfico web de 2026. Países, dispositivos y canales provienen de informes de propiedad y pueden incluir una fracción de otros hosts (14 sesiones). No sumar usuarios únicos entre propiedades."
+}

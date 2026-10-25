@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "revisado_el": "2026-10-25",
+  "propiedad_ga4": "401557991",
+  "flujo_actual": "Mi Moodle",
+  "measurement_id": "G-D0YXTL06LN",
+  "script_central": "https://www.movidasst.com/analytics.js?v=20261025",
+  "css_central": "https://www.movidasst.com/analytics.css?v=20261025",
+  "tratamiento": "consentimiento explícito, no se carga GA4 antes de la aceptación; los page_view usan solo hostname sin query ni datos de perfiles",
+  "estado_de_despliegue": "código instalado y comprobado en repositorios; no equivale a confirmar recepción de eventos en GA4",
+  "excluido": "movidasst.org (Moodle ya medido; fuera del conjunto de subdominios .com)",
+  "total_subdominios": 57,
+  "sites": [
+    {
+      "host": "www.movidasst.com",
+      "repo": "movidasst/principal",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "registro.movidasst.com",
+      "repo": "movidasst/REGISTRO",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "directorio.movidasst.com",
+      "repo": "movidasst/geo",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "estudia.movidasst.com",
+      "repo": "movidasst/estudia",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "laboratorio.movidasst.com",
+      "repo": "movidasst/LABORATORIO",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "participa.movidasst.com",
+      "repo": "movidasst/participa",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "drive.movidasst.com",
+      "repo": "movidasst/drive",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "inscripciones.movidasst.com",
+      "repo": "movidasst/inscripciones",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "aplicaciones.movidasst.com",
+      "repo": "movidasst/aplicaciones",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "desarrolla.movidasst.com",
+      "repo": "movidasst/desarrolla-sst",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "metricas.movidasst.com",
+      "repo": "movidasst/metricas",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "novedades.movidasst.com",
+      "repo": "movidasst/novedades",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "mentoring.movidasst.com",
+      "repo": "movidasst/mentoring",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "indicadores.movidasst.com",
+      "repo": "movidasst/indicadores",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "estadisticas.movidasst.com",
+      "repo": "movidasst/estadisticas",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "emergencias.movidasst.com",
+      "repo": "movidasst/emergencias",
+      "archivos": [
+        "pe/app.html",
+        "monitor/index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "pefamiliar.movidasst.com",
+      "repo": "movidasst/pefamiliar",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "psst.movidasst.com",
+      "repo": "movidasst/psst",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "gestion.movidasst.com",
+      "repo": "movidasst/gestion",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "presupuesto.movidasst.com",
+      "repo": "movidasst/presupuesto",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "contratista.movidasst.com",
+      "repo": "movidasst/contratistas",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "pif.movidasst.com",
+      "repo": "movidasst/pif",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "higieneocupacional.movidasst.com",
+      "repo": "movidasst/higiene_ocupacional",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "sonometro.movidasst.com",
+      "repo": "movidasst/sonometro",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "luxometro.movidasst.com",
+      "repo": "movidasst/luxometro",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "vibrometro.movidasst.com",
+      "repo": "movidasst/vibrometro",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "anemometro.movidasst.com",
+      "repo": "movidasst/anemometro",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "multigas.movidasst.com",
+      "repo": "movidasst/multigas",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "termico.movidasst.com",
+      "repo": "movidasst/termico",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "aerosoles.movidasst.com",
+      "repo": "movidasst/muestreo-aerosoles",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "cem.movidasst.com",
+      "repo": "movidasst/campos-electromagneticos",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "geiger.movidasst.com",
+      "repo": "movidasst/geiger-muller",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "servicios.movidasst.com",
+      "repo": "movidasst/servicios",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "gente.movidasst.com",
+      "repo": "movidasst/gente",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "censo.movidasst.com",
+      "repo": "movidasst/censo",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "tablero.movidasst.com",
+      "repo": "movidasst/tablero",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "mac.movidasst.com",
+      "repo": "movidasst/inv-at-web",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "portal.movidasst.com",
+      "repo": "movidasst/miembros",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "dao.movidasst.com",
+      "repo": "movidasst/insignias",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "proveedores.movidasst.com",
+      "repo": "movidasst/proveedores",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "dp.movidasst.com",
+      "repo": "movidasst/delegados",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "davidlinares.movidasst.com",
+      "repo": "movidasst/davidlinaresbrea",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "insignias.movidasst.com",
+      "repo": "movidasst/insigniasmovida",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "mancomunados.movidasst.com",
+      "repo": "movidasst/mancomunados",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "gobernanza.movidasst.com",
+      "repo": "movidasst/gobernanza",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "ia.movidasst.com",
+      "repo": "movidasst/ia",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "proyectos.movidasst.com",
+      "repo": "movidasst/proyectos",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "controlbanding.movidasst.com",
+      "repo": "movidasst/controlbanding",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "pp.movidasst.com",
+      "repo": "movidasst/procesospeligrosos",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "nps.movidasst.com",
+      "repo": "movidasst/nps",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "guia.movidasst.com",
+      "repo": "movidasst/guia",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "calificaciones.movidasst.com",
+      "repo": "movidasst/calificaciones",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "salarios.movidasst.com",
+      "repo": "movidasst/SALARIOS",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "gdr.movidasst.com",
+      "repo": "movidasst/GDR",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "piensa.movidasst.com",
+      "repo": "movidasst/Ia-pensamientocritico",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "h5p.movidasst.com",
+      "repo": "movidasst/h5p-ia",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    },
+    {
+      "host": "normas.movidasst.com",
+      "repo": "movidasst/normas",
+      "archivos": [
+        "index.html"
+      ],
+      "estado": "etiqueta_instalada_en_git"
+    }
+  ]
+}

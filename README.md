@@ -1,42 +1,26 @@
-# Métricas — La Movida de SST+
+# Métricas de La Movida de SST+
 
-Portal: https://metricas.movidasst.com/
+## Tablero público
 
-## Qué contiene
-Sitio estático para consultar el informe de Looker Studio asociado al ecosistema y explicar cómo interpretar las métricas. Archivo principal: `index.html`.
+[metricas.movidasst.com](https://metricas.movidasst.com/) muestra un **resumen general acumulado** con 4 pestañas: **General**, **Países**, **Dispositivos** y **Canales**. La interfaz es mobile-first y usa barra inferior sólida en dispositivos móviles.
 
-## Informe vinculado
-- ID del informe: `a52dba2d-8ef2-4dc1-9c74-20a2993627fc`
-- Página: `YWYSF`
-- Visor integrado: https://lookerstudio.google.com/embed/reporting/a52dba2d-8ef2-4dc1-9c74-20a2993627fc/page/YWYSF
-- Informe externo: https://lookerstudio.google.com/reporting/a52dba2d-8ef2-4dc1-9c74-20a2993627fc/page/YWYSF
+Las cifras visibles se cargan de [resumen-ecosistema.json](./resumen-ecosistema.json), generado a partir de consultas verificadas a Google Analytics 4 vía Windsor.ai. En la vista pública no aparecen avisos sobre períodos históricos ni listados de subdominios.
 
-La web **no almacena, modifica ni inventa cifras**. Recargar el iframe no fuerza el refresco del origen de datos.
+## Agregación aplicada
 
-## Comprobaciones antes de publicar cifras
-1. Abrir el informe con permisos adecuados y comprobar si el acceso público es intencionado.
-2. Confirmar la fuente conectada (GA4 u otra), su identificador, su vigencia y el alcance exacto de dominios/subdominios.
-3. Verificar período, zona horaria, filtros, tráfico interno y eventuales duplicaciones.
-4. Comprobar en el origen la fecha efectiva de actualización; no afirmar "tiempo real" sin evidencia.
-5. Verificar funcionamiento real de la página en móvil y escritorio después del despliegue.
+- Fecha de consulta: **25 de octubre de 2026**.
+- Período cubierto: **25 de octubre de 2024 al 24 de octubre de 2026**.
+- Propiedad web principal: **414669681**, hostname `www.movidasst.com`, ID de etiqueta `G-WQMF05XMJL`.
+- Propiedad de Moodle: **401557991**, hostname `movidasst.org`, ID de etiqueta `G-D0YXTL06LN`.
+- Sesiones, vistas, sesiones con interacción y conteos de usuarios se **suman por propiedad**, según autorización expresa del administrador. La tasa de interacción se obtiene dividiendo sesiones con interacción por sesiones totales combinadas.
+- La suma de usuarios por propiedad puede incluir a la misma persona en ambas; por ello el KPI se denomina solamente **Usuarios**, nunca **Usuarios únicos**.
+- Países, dispositivos y canales agrupan sumando sus sesiones por categoría; algunas distribuciones de GA4 pueden no reconciliar exactamente con el total de sesiones, dependiendo de los resultados dimensionales de la API.
+- El gráfico presenta los últimos 12 meses del período; el acumulado de tarjetas cubre todo el corte.
 
-Documentación oficial sobre frecuencia de actualización:
-https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness
+## Fuentes adicionales conservadas
 
-## Experiencia de usuario
-Interfaz responsive, navegación por pestañas (panel, indicadores y fuente), barra inferior fija en móvil, botón para abrir el informe, recarga del visor y pantalla completa cuando la plataforma lo permite.
+- [historico-web-ga4.json](./historico-web-ga4.json) — extracción completa del período web principal de 2025.
+- [snapshot-ga4.json](./snapshot-ga4.json) — extracción de Moodle correspondiente al período reciente anterior.
+- [cobertura-ga4.json](./cobertura-ga4.json) — inventario técnico de los 57 subdominios que tienen instalado el cargador del flujo web, pendiente de verificar recepción de nuevos eventos.
 
-## Limitaciones de esta revisión
-Se verificó la estructura y el código en GitHub. No se logró confirmar la carga pública del subdominio, ni leer el contenido o la fuente interna del informe desde las herramientas disponibles.
-
-**La Movida de SST+** · De la Reacción a la Prevención
-
-## Propiedades verificadas y cobertura (25 de octubre de 2026)
-
-- **Moodle (`movidasst.org`):** propiedad GA4 `401557991`, flujo `G-D0YXTL06LN` («Mi Moodle»), zona horaria actual `America/Los_Angeles`. Es la fuente del informe original de Looker Studio y del corte reciente del observatorio. Pendiente cambiarla a `America/Santiago` en Administrador de GA4.
-- **Web principal (`www.movidasst.com`):** propiedad `414669681` (en GA4 aparece con el nombre confuso «movidasst.org»), flujo `G-WQMF05XMJL` («Movidasst»), zona horaria ya `America/Santiago`. Se recuperó el histórico del 25-jul-2025 al 30-dic-2025. Archivo: [historico-web-ga4.json](./historico-web-ga4.json).
-- **Academia:** propiedad `413672304` conectada en Windsor.ai, pero sin datos devueltos para el período de dos años consultado.
-- **57 subdominios `.movidasst.com`:** código GA4 web corregido para usar `G-WQMF05XMJL` mediante [analytics.js del HUB](https://github.com/movidasst/principal/blob/main/analytics.js), con consentimiento previo y URL de página despersonalizada. Inventario [cobertura-ga4.json](./cobertura-ga4.json).
-- **Diagnóstico de etiqueta:** `https://www.movidasst.com/diagnostico-ga4.html` (publicación y recepción de evento aún pendientes de confirmar con pruebas en navegador y DebugView).
-- **Tablero:** 5 pestañas (Resumen, Audiencia, Canales, Histórico web, Fuentes). No suma usuarios activos entre propiedades como si fueran personas únicas. El histórico de la web principal se presenta en una vista separada del corte reciente de Moodle, evitando aparentar una tendencia continua donde faltan registros.
-- **Limitación de publicación:** cambios comprobados en los repositorios de GitHub, no verificada su publicación pública ni la llegada a GA4 de eventos de los nuevos subdominios.
+La página es estática. Para actualizar las cifras publicadas, se debe repetir la consulta a GA4 y reemplazar `resumen-ecosistema.json`. La publicación efectiva debe verificarse en un navegador.

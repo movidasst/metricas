@@ -1,0 +1,508 @@
+{
+  "generated_on": "2026-10-25",
+  "date_from": "2024-10-25",
+  "date_to": "2026-10-24",
+  "headline": "La Movida de SST+",
+  "total": {
+    "users": 8352,
+    "sessions": 27883,
+    "views": 195273,
+    "engaged_sessions": 18249,
+    "engagement_rate": 0.65448
+  },
+  "countries": [
+    {
+      "name": "Venezuela",
+      "sessions": 20457
+    },
+    {
+      "name": "Chile",
+      "sessions": 3216
+    },
+    {
+      "name": "United States",
+      "sessions": 1182
+    },
+    {
+      "name": "China",
+      "sessions": 585
+    },
+    {
+      "name": "Colombia",
+      "sessions": 576
+    },
+    {
+      "name": "Peru",
+      "sessions": 315
+    },
+    {
+      "name": "Ecuador",
+      "sessions": 274
+    },
+    {
+      "name": "Mexico",
+      "sessions": 239
+    },
+    {
+      "name": "Singapore",
+      "sessions": 227
+    },
+    {
+      "name": "Argentina",
+      "sessions": 221
+    },
+    {
+      "name": "Netherlands",
+      "sessions": 103
+    },
+    {
+      "name": "Germany",
+      "sessions": 86
+    },
+    {
+      "name": "Spain",
+      "sessions": 67
+    },
+    {
+      "name": "Paraguay",
+      "sessions": 59
+    },
+    {
+      "name": "Brazil",
+      "sessions": 56
+    },
+    {
+      "name": "Canada",
+      "sessions": 49
+    },
+    {
+      "name": "Iran",
+      "sessions": 43
+    },
+    {
+      "name": "Costa Rica",
+      "sessions": 38
+    },
+    {
+      "name": "Dominican Republic",
+      "sessions": 33
+    },
+    {
+      "name": "Nicaragua",
+      "sessions": 32
+    },
+    {
+      "name": "United Kingdom",
+      "sessions": 31
+    },
+    {
+      "name": "Sweden",
+      "sessions": 29
+    },
+    {
+      "name": "Bolivia",
+      "sessions": 25
+    },
+    {
+      "name": "El Salvador",
+      "sessions": 24
+    },
+    {
+      "name": "Ireland",
+      "sessions": 22
+    },
+    {
+      "name": "Uruguay",
+      "sessions": 20
+    },
+    {
+      "name": "France",
+      "sessions": 20
+    },
+    {
+      "name": "Russia",
+      "sessions": 19
+    },
+    {
+      "name": "Panama",
+      "sessions": 17
+    },
+    {
+      "name": "(not set)",
+      "sessions": 16
+    },
+    {
+      "name": "Guatemala",
+      "sessions": 15
+    },
+    {
+      "name": "Honduras",
+      "sessions": 15
+    },
+    {
+      "name": "Australia",
+      "sessions": 13
+    },
+    {
+      "name": "India",
+      "sessions": 13
+    },
+    {
+      "name": "Austria",
+      "sessions": 11
+    },
+    {
+      "name": "Poland",
+      "sessions": 8
+    },
+    {
+      "name": "Romania",
+      "sessions": 8
+    },
+    {
+      "name": "Saudi Arabia",
+      "sessions": 7
+    },
+    {
+      "name": "Luxembourg",
+      "sessions": 7
+    },
+    {
+      "name": "Japan",
+      "sessions": 6
+    },
+    {
+      "name": "Iraq",
+      "sessions": 5
+    },
+    {
+      "name": "Hong Kong",
+      "sessions": 5
+    },
+    {
+      "name": "Vietnam",
+      "sessions": 5
+    },
+    {
+      "name": "Italy",
+      "sessions": 4
+    },
+    {
+      "name": "Iceland",
+      "sessions": 4
+    },
+    {
+      "name": "Norway",
+      "sessions": 4
+    },
+    {
+      "name": "South Africa",
+      "sessions": 4
+    },
+    {
+      "name": "Indonesia",
+      "sessions": 3
+    },
+    {
+      "name": "Lithuania",
+      "sessions": 3
+    },
+    {
+      "name": "Albania",
+      "sessions": 2
+    },
+    {
+      "name": "Czech Republic",
+      "sessions": 2
+    },
+    {
+      "name": "Nigeria",
+      "sessions": 2
+    },
+    {
+      "name": "Philippines",
+      "sessions": 2
+    },
+    {
+      "name": "Portugal",
+      "sessions": 2
+    },
+    {
+      "name": "Seychelles",
+      "sessions": 2
+    },
+    {
+      "name": "South Korea",
+      "sessions": 2
+    },
+    {
+      "name": "Bangladesh",
+      "sessions": 1
+    },
+    {
+      "name": "Sin especificar",
+      "sessions": 1
+    },
+    {
+      "name": "Algeria",
+      "sessions": 1
+    },
+    {
+      "name": "Bahrain",
+      "sessions": 1
+    },
+    {
+      "name": "Denmark",
+      "sessions": 1
+    },
+    {
+      "name": "Finland",
+      "sessions": 1
+    },
+    {
+      "name": "Ghana",
+      "sessions": 1
+    },
+    {
+      "name": "Greece",
+      "sessions": 1
+    },
+    {
+      "name": "Haiti",
+      "sessions": 1
+    },
+    {
+      "name": "Laos",
+      "sessions": 1
+    },
+    {
+      "name": "Malaysia",
+      "sessions": 1
+    },
+    {
+      "name": "Oman",
+      "sessions": 1
+    },
+    {
+      "name": "Serbia",
+      "sessions": 1
+    },
+    {
+      "name": "Sierra Leone",
+      "sessions": 1
+    },
+    {
+      "name": "Switzerland",
+      "sessions": 1
+    },
+    {
+      "name": "Syria",
+      "sessions": 1
+    },
+    {
+      "name": "Taiwan",
+      "sessions": 1
+    },
+    {
+      "name": "Tajikistan",
+      "sessions": 1
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "sessions": 1
+    },
+    {
+      "name": "Türkiye",
+      "sessions": 1
+    },
+    {
+      "name": "Ukraine",
+      "sessions": 1
+    }
+  ],
+  "devices": [
+    {
+      "name": "desktop",
+      "sessions": 14834
+    },
+    {
+      "name": "mobile",
+      "sessions": 13412
+    },
+    {
+      "name": "tablet",
+      "sessions": 60
+    },
+    {
+      "name": "smart tv",
+      "sessions": 1
+    }
+  ],
+  "channels": [
+    {
+      "name": "Direct",
+      "sessions": 14004
+    },
+    {
+      "name": "Organic Search",
+      "sessions": 7585
+    },
+    {
+      "name": "Referral",
+      "sessions": 5281
+    },
+    {
+      "name": "Organic Social",
+      "sessions": 658
+    },
+    {
+      "name": "Unassigned",
+      "sessions": 164
+    },
+    {
+      "name": "AI Assistant",
+      "sessions": 41
+    },
+    {
+      "name": "Organic Video",
+      "sessions": 40
+    },
+    {
+      "name": "Paid Social",
+      "sessions": 8
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2024-10",
+      "sessions": 388,
+      "views": 3609
+    },
+    {
+      "month": "2024-11",
+      "sessions": 872,
+      "views": 8031
+    },
+    {
+      "month": "2024-12",
+      "sessions": 332,
+      "views": 3848
+    },
+    {
+      "month": "2025-01",
+      "sessions": 321,
+      "views": 1921
+    },
+    {
+      "month": "2025-02",
+      "sessions": 421,
+      "views": 2680
+    },
+    {
+      "month": "2025-03",
+      "sessions": 306,
+      "views": 1800
+    },
+    {
+      "month": "2025-04",
+      "sessions": 774,
+      "views": 5422
+    },
+    {
+      "month": "2025-05",
+      "sessions": 697,
+      "views": 4595
+    },
+    {
+      "month": "2025-06",
+      "sessions": 382,
+      "views": 2599
+    },
+    {
+      "month": "2025-07",
+      "sessions": 1175,
+      "views": 7955
+    },
+    {
+      "month": "2025-08",
+      "sessions": 2184,
+      "views": 6858
+    },
+    {
+      "month": "2025-09",
+      "sessions": 1464,
+      "views": 4309
+    },
+    {
+      "month": "2025-10",
+      "sessions": 2581,
+      "views": 9173
+    },
+    {
+      "month": "2025-11",
+      "sessions": 1621,
+      "views": 5766
+    },
+    {
+      "month": "2025-12",
+      "sessions": 926,
+      "views": 4815
+    },
+    {
+      "month": "2026-01",
+      "sessions": 1473,
+      "views": 15963
+    },
+    {
+      "month": "2026-02",
+      "sessions": 1877,
+      "views": 19361
+    },
+    {
+      "month": "2026-03",
+      "sessions": 1518,
+      "views": 13548
+    },
+    {
+      "month": "2026-04",
+      "sessions": 1251,
+      "views": 9761
+    },
+    {
+      "month": "2026-05",
+      "sessions": 823,
+      "views": 6463
+    },
+    {
+      "month": "2026-06",
+      "sessions": 841,
+      "views": 6225
+    },
+    {
+      "month": "2026-07",
+      "sessions": 851,
+      "views": 6657
+    },
+    {
+      "month": "2026-08",
+      "sessions": 1483,
+      "views": 14092
+    },
+    {
+      "month": "2026-09",
+      "sessions": 1480,
+      "views": 13877
+    },
+    {
+      "month": "2026-10",
+      "sessions": 1738,
+      "views": 15945
+    }
+  ],
+  "data_provenance": {
+    "web": "GA4 414669681, hostname www.movidasst.com",
+    "moodle": "GA4 401557991, hostname movidasst.org",
+    "method": "Suma de agregados de GA4 por propiedad solicitada por el usuario",
+    "notes": "Usuarios sumados entre dos propiedades pueden representar visitantes repetidos; los desgloses de sesiones de GA4 pueden no reconciliar exactamente con los agregados por dimensiones."
+  }
+}

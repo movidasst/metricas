@@ -53,6 +53,7 @@
     .hero-sub{max-width:780px;margin:0;color:#3b5770;font-size:.98rem}
     .hero-meta{margin-top:19px;display:flex;gap:9px;flex-wrap:wrap}
     .meta{background:#fff;border:1px solid #cce3e6;border-radius:99px;padding:6px 11px;font-size:.77rem;font-weight:700}
+    .report-range{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.8rem}.report-range select{font:inherit;color:var(--navy);background:#fff;border:1px solid #cce3e6;border-radius:9px;padding:6px 8px;min-height:36px}
     main{padding:17px 0 80px}
     .tabs{display:flex;gap:8px;margin:0 0 17px}
     .tab{border:1px solid var(--line);border-radius:12px;background:#fff;color:#587089;padding:11px 18px;font-weight:800;min-height:44px}
@@ -183,6 +184,7 @@
     <div class="hero-meta">
       <span class="meta" id="period">Acumulado 2024–2026</span>
       <span class="meta">Google Analytics</span>
+      <label class="report-range" for="reportRange">Período <select id="reportRange" disabled><option value="recent">Últimos 28 días</option><option value="historical">Histórico acumulado</option></select></label>
     </div>
   </div>
 </section>
@@ -195,7 +197,7 @@
   </nav>
   <section class="page" data-view="general" id="general">
     <div class="page-title">
-      <div><h2>Métricas generales</h2><p>Resultados acumulados de las plataformas de La Movida SST+</p></div>
+      <div><h2>Métricas generales</h2><p>Resultados de las plataformas de La Movida SST+</p></div>
       <span class="period">Vista general</span>
     </div>
     <div class="metrics">
@@ -206,8 +208,8 @@
     </div>
     <div class="section-grid">
       <article class="panel">
-        <div class="panel-title"><div><h3>Evolución de visitas</h3><small>Sesiones por mes</small></div><span class="panel-tag">Últimos 12 meses</span></div>
-        <div id="monthlyChart" class="bar-chart" role="img" aria-label="Visitas de los últimos 12 meses"></div>
+        <div class="panel-title"><div><h3>Evolución de visitas</h3><small id="trendFrequency">Sesiones por mes</small></div><span class="panel-tag" id="trendPeriod">Últimos 12 meses</span></div>
+        <div id="monthlyChart" class="bar-chart" role="img" aria-label="Evolución de sesiones"></div>
       </article>
       <article class="panel">
         <div class="panel-title"><div><h3>Principales resultados</h3><small>Indicadores destacados</small></div></div>
@@ -297,29 +299,33 @@ function rows(selector,items,title,total,limit){
 }
 function monthly(months){
  var root=$("#monthlyChart");root.replaceChildren();
- var arr=months.slice(-12),max=Math.max(1,...arr.map(function(x){return n(x.sessions)}));
+ var arr=months,max=Math.max(1,...arr.map(function(x){return n(x.sessions)}));
  arr.forEach(function(x,i){
    var col=document.createElement("div");col.className="monthbar";
-   var v=document.createElement("span");v.className="value";v.textContent=i%2===0?f.format(x.sessions):"";
+   var v=document.createElement("span");v.className="value";v.textContent=i%(arr.length>12?7:2)===0?f.format(x.sessions):"";
    var b=document.createElement("div");b.className="bar";b.style.height=(Math.max(2,n(x.sessions)/max*160))+"px";
    var cap=document.createElement("span");cap.className="axis";
    var y=String(x.month||"").split("-"),month=Number(y[1])-1;
    cap.textContent=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"][month]||"";
-   col.title=x.month+": "+f.format(n(x.sessions))+" sesiones";
+   if(x.date)cap.textContent=i%7===0?x.date.slice(8):"";
+   col.title=(x.date||x.month)+": "+f.format(n(x.sessions))+" sesiones";
    col.append(v,b,cap);root.append(col);
  });
- root.setAttribute("aria-label",arr.map(function(x){return x.month+" "+f.format(n(x.sessions))+" sesiones"}).join("; "));
+ root.setAttribute("aria-label",arr.map(function(x){return (x.date||x.month)+" "+f.format(n(x.sessions))+" sesiones"}).join("; "));
 }
+function displayDate(value){return value.split("-").reverse().join("/")}
 function render(data){
- if(!data||!data.total||!data.countries||!data.devices||!data.channels||!data.monthly)throw Error("Sin estadísticas");
+ if(!data||!data.total||!data.countries||!data.devices||!data.channels||!(data.daily||data.monthly))throw Error("Sin estadísticas");
  var total=data.total;
  set("#totalUsers",f.format(n(total.users)));
  set("#totalSessions",f.format(n(total.sessions)));
  set("#totalViews",f.format(n(total.views)));
- if(data.views_date_to)set("#viewsCutoff","· Corte "+data.views_date_to.split("-").reverse().join("/"));
+ set("#viewsCutoff",data.views_date_to?"· Corte "+displayDate(data.views_date_to):"");
  set("#totalEngagement",p(n(total.engagement_rate)));
- if(data.date_to)set("#period","Acumulado · "+String(data.date_from).slice(0,4)+"–"+String(data.date_to).slice(0,4));
- monthly(data.monthly);
+ set("#period",displayDate(data.date_from)+" al "+displayDate(data.date_to));
+ set("#trendFrequency",data.daily?"Sesiones por día":"Sesiones por mes");
+ set("#trendPeriod",data.daily?"Últimos 28 días":"Últimos 12 meses");
+ monthly(data.daily||data.monthly.slice(-12));
  var countries=data.countries.filter(function(x){return x.name&&!["(not set)","Sin especificar",""].includes(x.name)}).sort(function(a,b){return n(b.sessions)-n(a.sessions)});
  var countrySum=countries.reduce(function(s,x){return s+n(x.sessions)},0);
  var sliced=countries.slice(0,10),other=countries.slice(10).reduce(function(s,x){return s+n(x.sessions)},0);
@@ -354,7 +360,14 @@ function render(data){
  var items=[["Principal país",labelCountry(countries[0]?.name||"—")],["Segundo país",labelCountry(countries[1]?.name||"—")],["Dispositivo más usado",labelDevice(devices[0]?.name||"—")],["Canal principal",labelChannel(channels[0]?.name||"—")]];
  items.forEach(function(r){var div=document.createElement("div");div.className="insight";var k=document.createElement("b");k.textContent=r[0];var v=document.createElement("strong");v.textContent=r[1];div.append(k,v);highlights.append(div)});
 }
-fetch("./resumen-ecosistema.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("Error del informe");return r.json()}).then(render).catch(function(e){console.warn("No fue posible cargar estadísticas",e)});
+fetch("./resumen-ecosistema.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("Error del informe");return r.json()}).then(function(data){
+ var selector=$("#reportRange");
+ var renderSelected=function(){render(selector.value==="recent"&&data.recent?data.recent:data)};
+ selector.value=data.recent?"recent":"historical";
+ selector.disabled=!data.recent;
+ renderSelected();
+ selector.addEventListener("change",renderSelected);
+}).catch(function(e){console.warn("No fue posible cargar estadísticas",e)});
 var initial=new URLSearchParams(location.search).get("pestana");currentPage(["general","paises","dispositivos","canales"].includes(initial)?initial:"general");
 })();
 </script>

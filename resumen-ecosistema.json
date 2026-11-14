@@ -6,7 +6,7 @@
   "total": {
     "users": 8352,
     "sessions": 27883,
-    "views": 207586,
+    "views": 207865,
     "engaged_sessions": 18249,
     "engagement_rate": 0.65448
   },
@@ -505,7 +505,7 @@
     "method": "Suma de agregados de GA4 por propiedad solicitada por el usuario",
     "notes": "Usuarios sumados entre dos propiedades pueden representar visitantes repetidos; los desgloses de sesiones de GA4 pueden no reconciliar exactamente con los agregados por dimensiones."
   },
-  "views_date_to": "2026-11-12",
+  "views_date_to": "2026-11-13",
   "recent": {
     "date_from": "2026-10-16",
     "date_to": "2026-11-12",

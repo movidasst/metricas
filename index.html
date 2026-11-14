@@ -201,7 +201,7 @@
     <div class="metrics">
       <article class="metric"><span class="metric-label">Usuarios</span><strong class="metric-value" id="totalUsers">8.352</strong><span class="metric-small">Audiencia registrada</span></article>
       <article class="metric"><span class="metric-label">Sesiones</span><strong class="metric-value" id="totalSessions">27.883</strong><span class="metric-small">Visitas registradas</span></article>
-      <article class="metric"><span class="metric-label">Vistas</span><strong class="metric-value" id="totalViews">195.273</strong><span class="metric-small">Páginas y pantallas vistas</span></article>
+      <article class="metric"><span class="metric-label">Vistas</span><strong class="metric-value" id="totalViews">195.273</strong><span class="metric-small">Páginas y pantallas vistas <span id="viewsCutoff"></span></span></article>
       <article class="metric"><span class="metric-label">Interacción</span><strong class="metric-value" id="totalEngagement">65,4 %</strong><span class="metric-small">Sesiones con interacción</span></article>
     </div>
     <div class="section-grid">
@@ -316,6 +316,7 @@ function render(data){
  set("#totalUsers",f.format(n(total.users)));
  set("#totalSessions",f.format(n(total.sessions)));
  set("#totalViews",f.format(n(total.views)));
+ if(data.views_date_to)set("#viewsCutoff","· Corte "+data.views_date_to.split("-").reverse().join("/"));
  set("#totalEngagement",p(n(total.engagement_rate)));
  if(data.date_to)set("#period","Acumulado · "+String(data.date_from).slice(0,4)+"–"+String(data.date_to).slice(0,4));
  monthly(data.monthly);

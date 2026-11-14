@@ -6,7 +6,7 @@
   "total": {
     "users": 8352,
     "sessions": 27883,
-    "views": 195273,
+    "views": 207586,
     "engaged_sessions": 18249,
     "engagement_rate": 0.65448
   },
@@ -504,5 +504,6 @@
     "moodle": "GA4 401557991, hostname movidasst.org",
     "method": "Suma de agregados de GA4 por propiedad solicitada por el usuario",
     "notes": "Usuarios sumados entre dos propiedades pueden representar visitantes repetidos; los desgloses de sesiones de GA4 pueden no reconciliar exactamente con los agregados por dimensiones."
-  }
+  },
+  "views_date_to": "2026-11-12"
 }

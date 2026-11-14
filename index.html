@@ -184,7 +184,7 @@
     <div class="hero-meta">
       <span class="meta" id="period">Acumulado 2024–2026</span>
       <span class="meta">Google Analytics</span>
-      <label class="report-range" for="reportRange">Período <select id="reportRange" disabled><option value="recent">Últimos 28 días</option><option value="historical">Histórico acumulado</option></select></label>
+      <label class="report-range" for="reportRange">Período <select id="reportRange" disabled><option value="historical" selected>Histórico acumulado</option><option value="recent">Últimos 28 días</option></select></label>
     </div>
   </div>
 </section>
@@ -363,7 +363,7 @@ function render(data){
 fetch("./resumen-ecosistema.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("Error del informe");return r.json()}).then(function(data){
  var selector=$("#reportRange");
  var renderSelected=function(){render(selector.value==="recent"&&data.recent?data.recent:data)};
- selector.value=data.recent?"recent":"historical";
+ selector.value="historical";
  selector.disabled=!data.recent;
  renderSelected();
  selector.addEventListener("change",renderSelected);

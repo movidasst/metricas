@@ -505,5 +505,276 @@
     "method": "Suma de agregados de GA4 por propiedad solicitada por el usuario",
     "notes": "Usuarios sumados entre dos propiedades pueden representar visitantes repetidos; los desgloses de sesiones de GA4 pueden no reconciliar exactamente con los agregados por dimensiones."
   },
-  "views_date_to": "2026-11-12"
+  "views_date_to": "2026-11-12",
+  "recent": {
+    "date_from": "2026-10-16",
+    "date_to": "2026-11-12",
+    "total": {
+      "users": 735,
+      "sessions": 2463,
+      "views": 19216,
+      "engaged_sessions": 1806,
+      "engagement_rate": 0.7332521315468941
+    },
+    "daily": [
+      {
+        "date": "2026-10-16",
+        "sessions": 92
+      },
+      {
+        "date": "2026-10-17",
+        "sessions": 80
+      },
+      {
+        "date": "2026-10-18",
+        "sessions": 55
+      },
+      {
+        "date": "2026-10-19",
+        "sessions": 142
+      },
+      {
+        "date": "2026-10-20",
+        "sessions": 76
+      },
+      {
+        "date": "2026-10-21",
+        "sessions": 56
+      },
+      {
+        "date": "2026-10-22",
+        "sessions": 53
+      },
+      {
+        "date": "2026-10-23",
+        "sessions": 43
+      },
+      {
+        "date": "2026-10-24",
+        "sessions": 51
+      },
+      {
+        "date": "2026-10-25",
+        "sessions": 87
+      },
+      {
+        "date": "2026-10-26",
+        "sessions": 132
+      },
+      {
+        "date": "2026-10-27",
+        "sessions": 92
+      },
+      {
+        "date": "2026-10-28",
+        "sessions": 100
+      },
+      {
+        "date": "2026-10-29",
+        "sessions": 112
+      },
+      {
+        "date": "2026-10-30",
+        "sessions": 75
+      },
+      {
+        "date": "2026-10-31",
+        "sessions": 71
+      },
+      {
+        "date": "2026-11-01",
+        "sessions": 82
+      },
+      {
+        "date": "2026-11-02",
+        "sessions": 100
+      },
+      {
+        "date": "2026-11-03",
+        "sessions": 96
+      },
+      {
+        "date": "2026-11-04",
+        "sessions": 90
+      },
+      {
+        "date": "2026-11-05",
+        "sessions": 76
+      },
+      {
+        "date": "2026-11-06",
+        "sessions": 75
+      },
+      {
+        "date": "2026-11-07",
+        "sessions": 92
+      },
+      {
+        "date": "2026-11-08",
+        "sessions": 122
+      },
+      {
+        "date": "2026-11-09",
+        "sessions": 116
+      },
+      {
+        "date": "2026-11-10",
+        "sessions": 110
+      },
+      {
+        "date": "2026-11-11",
+        "sessions": 97
+      },
+      {
+        "date": "2026-11-12",
+        "sessions": 92
+      }
+    ],
+    "countries": [
+      {
+        "name": "Venezuela",
+        "sessions": 1878
+      },
+      {
+        "name": "Chile",
+        "sessions": 354
+      },
+      {
+        "name": "United States",
+        "sessions": 81
+      },
+      {
+        "name": "China",
+        "sessions": 49
+      },
+      {
+        "name": "Argentina",
+        "sessions": 20
+      },
+      {
+        "name": "Peru",
+        "sessions": 18
+      },
+      {
+        "name": "Ecuador",
+        "sessions": 13
+      },
+      {
+        "name": "Colombia",
+        "sessions": 12
+      },
+      {
+        "name": "Canada",
+        "sessions": 12
+      },
+      {
+        "name": "Mexico",
+        "sessions": 11
+      },
+      {
+        "name": "Australia",
+        "sessions": 5
+      },
+      {
+        "name": "Spain",
+        "sessions": 3
+      },
+      {
+        "name": "(not set)",
+        "sessions": 3
+      },
+      {
+        "name": "Paraguay",
+        "sessions": 2
+      },
+      {
+        "name": "Netherlands",
+        "sessions": 2
+      },
+      {
+        "name": "Cuba",
+        "sessions": 1
+      },
+      {
+        "name": "Dominican Republic",
+        "sessions": 1
+      },
+      {
+        "name": "France",
+        "sessions": 1
+      },
+      {
+        "name": "Iran",
+        "sessions": 1
+      },
+      {
+        "name": "Pakistan",
+        "sessions": 1
+      },
+      {
+        "name": "Portugal",
+        "sessions": 1
+      },
+      {
+        "name": "Singapore",
+        "sessions": 1
+      },
+      {
+        "name": "Sweden",
+        "sessions": 1
+      }
+    ],
+    "devices": [
+      {
+        "name": "desktop",
+        "sessions": 1322
+      },
+      {
+        "name": "mobile",
+        "sessions": 1146
+      },
+      {
+        "name": "tablet",
+        "sessions": 8
+      },
+      {
+        "name": "smart tv",
+        "sessions": 1
+      }
+    ],
+    "channels": [
+      {
+        "name": "Direct",
+        "sessions": 1127
+      },
+      {
+        "name": "Organic Search",
+        "sessions": 1044
+      },
+      {
+        "name": "Referral",
+        "sessions": 229
+      },
+      {
+        "name": "AI Assistant",
+        "sessions": 32
+      },
+      {
+        "name": "Unassigned",
+        "sessions": 18
+      },
+      {
+        "name": "Organic Social",
+        "sessions": 9
+      },
+      {
+        "name": "Cross-network",
+        "sessions": 1
+      },
+      {
+        "name": "Organic Video",
+        "sessions": 1
+      }
+    ]
+  }
 }

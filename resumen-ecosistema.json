@@ -507,24 +507,16 @@
   },
   "views_date_to": "2026-11-14",
   "recent": {
-    "date_from": "2026-10-16",
-    "date_to": "2026-11-12",
+    "date_from": "2026-10-18",
+    "date_to": "2026-11-14",
     "total": {
-      "users": 735,
-      "sessions": 2463,
-      "views": 19216,
-      "engaged_sessions": 1806,
-      "engagement_rate": 0.7332521315468941
+      "users": 741,
+      "sessions": 2420,
+      "views": 17374,
+      "engaged_sessions": 1757,
+      "engagement_rate": 0.7260330578512396
     },
     "daily": [
-      {
-        "date": "2026-10-16",
-        "sessions": 92
-      },
-      {
-        "date": "2026-10-17",
-        "sessions": 80
-      },
       {
         "date": "2026-10-18",
         "sessions": 55
@@ -627,69 +619,57 @@
       },
       {
         "date": "2026-11-12",
-        "sessions": 92
+        "sessions": 57
+      },
+      {
+        "date": "2026-11-13",
+        "sessions": 74
+      },
+      {
+        "date": "2026-11-14",
+        "sessions": 93
       }
     ],
     "countries": [
       {
         "name": "Venezuela",
-        "sessions": 1878
+        "sessions": 1814
       },
       {
         "name": "Chile",
-        "sessions": 354
-      },
-      {
-        "name": "United States",
-        "sessions": 81
-      },
-      {
-        "name": "China",
-        "sessions": 49
-      },
-      {
-        "name": "Argentina",
-        "sessions": 20
+        "sessions": 370
       },
       {
         "name": "Peru",
-        "sessions": 18
+        "sessions": 21
+      },
+      {
+        "name": "Mexico",
+        "sessions": 16
+      },
+      {
+        "name": "United States",
+        "sessions": 80
+      },
+      {
+        "name": "Argentina",
+        "sessions": 23
       },
       {
         "name": "Ecuador",
-        "sessions": 13
+        "sessions": 14
       },
       {
         "name": "Colombia",
         "sessions": 12
       },
       {
-        "name": "Canada",
-        "sessions": 12
-      },
-      {
-        "name": "Mexico",
-        "sessions": 11
-      },
-      {
-        "name": "Australia",
-        "sessions": 5
-      },
-      {
         "name": "Spain",
         "sessions": 3
       },
       {
-        "name": "(not set)",
-        "sessions": 3
-      },
-      {
-        "name": "Paraguay",
-        "sessions": 2
-      },
-      {
-        "name": "Netherlands",
-        "sessions": 2
+        "name": "Canada",
+        "sessions": 12
       },
       {
         "name": "Cuba",
@@ -697,6 +677,38 @@
       },
       {
         "name": "Dominican Republic",
+        "sessions": 1
+      },
+      {
+        "name": "Panama",
+        "sessions": 1
+      },
+      {
+        "name": "Paraguay",
+        "sessions": 2
+      },
+      {
+        "name": "China",
+        "sessions": 43
+      },
+      {
+        "name": "(not set)",
+        "sessions": 3
+      },
+      {
+        "name": "Australia",
+        "sessions": 3
+      },
+      {
+        "name": "Netherlands",
+        "sessions": 2
+      },
+      {
+        "name": "Sin especificar",
+        "sessions": 1
+      },
+      {
+        "name": "Algeria",
         "sessions": 1
       },
       {
@@ -718,20 +730,16 @@
       {
         "name": "Singapore",
         "sessions": 1
-      },
-      {
-        "name": "Sweden",
-        "sessions": 1
       }
     ],
     "devices": [
       {
         "name": "desktop",
-        "sessions": 1322
+        "sessions": 1276
       },
       {
         "name": "mobile",
-        "sessions": 1146
+        "sessions": 1150
       },
       {
         "name": "tablet",
@@ -745,35 +753,31 @@
     "channels": [
       {
         "name": "Direct",
-        "sessions": 1127
+        "sessions": 1149
       },
       {
         "name": "Organic Search",
-        "sessions": 1044
+        "sessions": 990
       },
       {
         "name": "Referral",
-        "sessions": 229
-      },
-      {
-        "name": "AI Assistant",
-        "sessions": 32
-      },
-      {
-        "name": "Unassigned",
-        "sessions": 18
+        "sessions": 214
       },
       {
         "name": "Organic Social",
-        "sessions": 9
+        "sessions": 10
       },
       {
-        "name": "Cross-network",
-        "sessions": 1
+        "name": "Unassigned",
+        "sessions": 21
       },
       {
         "name": "Organic Video",
-        "sessions": 1
+        "sessions": 3
+      },
+      {
+        "name": "AI Assistant",
+        "sessions": 34
       }
     ]
   },

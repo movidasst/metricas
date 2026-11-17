@@ -6,7 +6,7 @@
   "total": {
     "users": 8352,
     "sessions": 27883,
-    "views": 208330,
+    "views": 209608,
     "engaged_sessions": 18249,
     "engagement_rate": 0.65448
   },
@@ -505,26 +505,18 @@
     "method": "Suma de agregados de GA4 por propiedad solicitada por el usuario",
     "notes": "Usuarios sumados entre dos propiedades pueden representar visitantes repetidos; los desgloses de sesiones de GA4 pueden no reconciliar exactamente con los agregados por dimensiones."
   },
-  "views_date_to": "2026-11-14",
+  "views_date_to": "2026-11-16",
   "recent": {
-    "date_from": "2026-10-18",
-    "date_to": "2026-11-14",
+    "date_from": "2026-10-20",
+    "date_to": "2026-11-16",
     "total": {
-      "users": 741,
-      "sessions": 2420,
-      "views": 17374,
-      "engaged_sessions": 1757,
-      "engagement_rate": 0.7260330578512396
+      "users": 766,
+      "sessions": 2468,
+      "views": 17371,
+      "engaged_sessions": 1766,
+      "engagement_rate": 0.7155591572123177
     },
     "daily": [
-      {
-        "date": "2026-10-18",
-        "sessions": 55
-      },
-      {
-        "date": "2026-10-19",
-        "sessions": 142
-      },
       {
         "date": "2026-10-20",
         "sessions": 76
@@ -619,7 +611,7 @@
       },
       {
         "date": "2026-11-12",
-        "sessions": 57
+        "sessions": 92
       },
       {
         "date": "2026-11-13",
@@ -628,48 +620,104 @@
       {
         "date": "2026-11-14",
         "sessions": 93
+      },
+      {
+        "date": "2026-11-15",
+        "sessions": 79
+      },
+      {
+        "date": "2026-11-16",
+        "sessions": 128
       }
     ],
     "countries": [
       {
         "name": "Venezuela",
-        "sessions": 1814
+        "sessions": 1811
       },
       {
         "name": "Chile",
-        "sessions": 370
-      },
-      {
-        "name": "Peru",
-        "sessions": 21
-      },
-      {
-        "name": "Mexico",
-        "sessions": 16
+        "sessions": 402
       },
       {
         "name": "United States",
-        "sessions": 80
+        "sessions": 85
+      },
+      {
+        "name": "China",
+        "sessions": 42
       },
       {
         "name": "Argentina",
-        "sessions": 23
+        "sessions": 25
+      },
+      {
+        "name": "Canada",
+        "sessions": 14
+      },
+      {
+        "name": "Colombia",
+        "sessions": 15
       },
       {
         "name": "Ecuador",
         "sessions": 14
       },
       {
-        "name": "Colombia",
-        "sessions": 12
+        "name": "Peru",
+        "sessions": 21
       },
       {
-        "name": "Spain",
+        "name": "(not set)",
+        "sessions": 4
+      },
+      {
+        "name": "Netherlands",
+        "sessions": 4
+      },
+      {
+        "name": "Australia",
         "sessions": 3
       },
       {
-        "name": "Canada",
-        "sessions": 12
+        "name": "France",
+        "sessions": 3
+      },
+      {
+        "name": "Germany",
+        "sessions": 3
+      },
+      {
+        "name": "Mexico",
+        "sessions": 17
+      },
+      {
+        "name": "Algeria",
+        "sessions": 1
+      },
+      {
+        "name": "Iran",
+        "sessions": 1
+      },
+      {
+        "name": "Pakistan",
+        "sessions": 1
+      },
+      {
+        "name": "Paraguay",
+        "sessions": 2
+      },
+      {
+        "name": "Portugal",
+        "sessions": 1
+      },
+      {
+        "name": "Singapore",
+        "sessions": 1
+      },
+      {
+        "name": "Spain",
+        "sessions": 4
       },
       {
         "name": "Cuba",
@@ -682,82 +730,30 @@
       {
         "name": "Panama",
         "sessions": 1
-      },
-      {
-        "name": "Paraguay",
-        "sessions": 2
-      },
-      {
-        "name": "China",
-        "sessions": 43
-      },
-      {
-        "name": "(not set)",
-        "sessions": 3
-      },
-      {
-        "name": "Australia",
-        "sessions": 3
-      },
-      {
-        "name": "Netherlands",
-        "sessions": 2
-      },
-      {
-        "name": "Sin especificar",
-        "sessions": 1
-      },
-      {
-        "name": "Algeria",
-        "sessions": 1
-      },
-      {
-        "name": "France",
-        "sessions": 1
-      },
-      {
-        "name": "Iran",
-        "sessions": 1
-      },
-      {
-        "name": "Pakistan",
-        "sessions": 1
-      },
-      {
-        "name": "Portugal",
-        "sessions": 1
-      },
-      {
-        "name": "Singapore",
-        "sessions": 1
       }
     ],
     "devices": [
       {
-        "name": "desktop",
-        "sessions": 1276
+        "name": "mobile",
+        "sessions": 1198
       },
       {
-        "name": "mobile",
-        "sessions": 1150
+        "name": "desktop",
+        "sessions": 1278
       },
       {
         "name": "tablet",
-        "sessions": 8
-      },
-      {
-        "name": "smart tv",
-        "sessions": 1
+        "sessions": 4
       }
     ],
     "channels": [
       {
         "name": "Direct",
-        "sessions": 1149
+        "sessions": 1206
       },
       {
         "name": "Organic Search",
-        "sessions": 990
+        "sessions": 967
       },
       {
         "name": "Referral",
@@ -769,7 +765,7 @@
       },
       {
         "name": "Unassigned",
-        "sessions": 21
+        "sessions": 25
       },
       {
         "name": "Organic Video",
@@ -777,7 +773,7 @@
       },
       {
         "name": "AI Assistant",
-        "sessions": 34
+        "sessions": 43
       }
     ]
   },

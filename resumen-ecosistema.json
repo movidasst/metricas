@@ -6,7 +6,7 @@
   "total": {
     "users": 8352,
     "sessions": 27883,
-    "views": 210177,
+    "views": 210569,
     "engaged_sessions": 18249,
     "engagement_rate": 0.65448
   },
@@ -505,22 +505,18 @@
     "method": "Suma de agregados de GA4 por propiedad solicitada por el usuario",
     "notes": "Usuarios sumados entre dos propiedades pueden representar visitantes repetidos; los desgloses de sesiones de GA4 pueden no reconciliar exactamente con los agregados por dimensiones."
   },
-  "views_date_to": "2026-11-17",
+  "views_date_to": "2026-11-18",
   "recent": {
-    "date_from": "2026-10-21",
-    "date_to": "2026-11-17",
+    "date_from": "2026-10-22",
+    "date_to": "2026-11-18",
     "total": {
-      "users": 795,
-      "sessions": 2510,
-      "views": 17174,
-      "engaged_sessions": 1789,
-      "engagement_rate": 0.7127490039840637
+      "users": 801,
+      "sessions": 2540,
+      "views": 17204,
+      "engaged_sessions": 1814,
+      "engagement_rate": 0.7141732283464567
     },
     "daily": [
-      {
-        "date": "2026-10-21",
-        "sessions": 56
-      },
       {
         "date": "2026-10-22",
         "sessions": 53
@@ -628,75 +624,51 @@
       {
         "date": "2026-11-17",
         "sessions": 120
+      },
+      {
+        "date": "2026-11-18",
+        "sessions": 86
       }
     ],
     "countries": [
       {
         "name": "Venezuela",
-        "sessions": 1839
+        "sessions": 1864
       },
       {
         "name": "Chile",
-        "sessions": 409
-      },
-      {
-        "name": "Peru",
-        "sessions": 23
+        "sessions": 415
       },
       {
         "name": "United States",
         "sessions": 87
       },
       {
-        "name": "Mexico",
-        "sessions": 18
+        "name": "China",
+        "sessions": 40
       },
       {
         "name": "Argentina",
-        "sessions": 25
-      },
-      {
-        "name": "Colombia",
-        "sessions": 15
-      },
-      {
-        "name": "Ecuador",
-        "sessions": 13
-      },
-      {
-        "name": "Spain",
-        "sessions": 5
+        "sessions": 27
       },
       {
         "name": "Canada",
         "sessions": 14
       },
       {
-        "name": "Cuba",
-        "sessions": 1
+        "name": "Colombia",
+        "sessions": 16
       },
       {
-        "name": "Dominican Republic",
-        "sessions": 1
+        "name": "Ecuador",
+        "sessions": 12
       },
       {
-        "name": "Panama",
-        "sessions": 1
-      },
-      {
-        "name": "Paraguay",
-        "sessions": 2
-      },
-      {
-        "name": "China",
-        "sessions": 42
+        "name": "Peru",
+        "sessions": 23
       },
       {
         "name": "(not set)",
-        "sessions": 4
-      },
-      {
-        "name": "Netherlands",
         "sessions": 4
       },
       {
@@ -710,6 +682,14 @@
       {
         "name": "Germany",
         "sessions": 3
+      },
+      {
+        "name": "Netherlands",
+        "sessions": 3
+      },
+      {
+        "name": "Mexico",
+        "sessions": 19
       },
       {
         "name": "Algeria",
@@ -736,22 +716,42 @@
         "sessions": 1
       },
       {
+        "name": "Paraguay",
+        "sessions": 2
+      },
+      {
         "name": "Portugal",
         "sessions": 1
       },
       {
         "name": "Singapore",
         "sessions": 1
+      },
+      {
+        "name": "Spain",
+        "sessions": 5
+      },
+      {
+        "name": "Cuba",
+        "sessions": 1
+      },
+      {
+        "name": "Dominican Republic",
+        "sessions": 1
+      },
+      {
+        "name": "Panama",
+        "sessions": 1
       }
     ],
     "devices": [
       {
         "name": "mobile",
-        "sessions": 1231
+        "sessions": 1239
       },
       {
         "name": "desktop",
-        "sessions": 1289
+        "sessions": 1310
       },
       {
         "name": "tablet",
@@ -760,32 +760,32 @@
     ],
     "channels": [
       {
-        "name": "Direct",
-        "sessions": 1255
+        "name": "Organic Search",
+        "sessions": 967
       },
       {
-        "name": "Organic Search",
-        "sessions": 959
+        "name": "Direct",
+        "sessions": 1273
       },
       {
         "name": "Referral",
-        "sessions": 209
+        "sessions": 204
+      },
+      {
+        "name": "AI Assistant",
+        "sessions": 57
+      },
+      {
+        "name": "Unassigned",
+        "sessions": 23
       },
       {
         "name": "Organic Social",
         "sessions": 10
       },
       {
-        "name": "Unassigned",
-        "sessions": 26
-      },
-      {
         "name": "Organic Video",
         "sessions": 3
-      },
-      {
-        "name": "AI Assistant",
-        "sessions": 49
       }
     ]
   },

@@ -6,7 +6,7 @@
   "total": {
     "users": 8352,
     "sessions": 27883,
-    "views": 211121,
+    "views": 212206,
     "engaged_sessions": 18249,
     "engagement_rate": 0.65448
   },
@@ -505,22 +505,18 @@
     "method": "Suma de agregados de GA4 por propiedad solicitada por el usuario",
     "notes": "Usuarios sumados entre dos propiedades pueden representar visitantes repetidos; los desgloses de sesiones de GA4 pueden no reconciliar exactamente con los agregados por dimensiones."
   },
-  "views_date_to": "2026-11-19",
+  "views_date_to": "2026-11-20",
   "recent": {
-    "date_from": "2026-10-23",
-    "date_to": "2026-11-19",
+    "date_from": "2026-10-24",
+    "date_to": "2026-11-20",
     "total": {
-      "users": 813,
-      "sessions": 2586,
-      "views": 17160,
-      "engaged_sessions": 1830,
-      "engagement_rate": 0.7076566125290024
+      "users": 840,
+      "sessions": 2663,
+      "views": 17813,
+      "engaged_sessions": 1878,
+      "engagement_rate": 0.7052196770559519
     },
     "daily": [
-      {
-        "date": "2026-10-23",
-        "sessions": 43
-      },
       {
         "date": "2026-10-24",
         "sessions": 51
@@ -628,24 +624,28 @@
       {
         "date": "2026-11-19",
         "sessions": 98
+      },
+      {
+        "date": "2026-11-20",
+        "sessions": 123
       }
     ],
     "countries": [
       {
         "name": "Venezuela",
-        "sessions": 1899
+        "sessions": 1939
       },
       {
         "name": "Chile",
-        "sessions": 419
-      },
-      {
-        "name": "Peru",
-        "sessions": 23
+        "sessions": 438
       },
       {
         "name": "United States",
-        "sessions": 87
+        "sessions": 96
+      },
+      {
+        "name": "Peru",
+        "sessions": 25
       },
       {
         "name": "Mexico",
@@ -653,15 +653,15 @@
       },
       {
         "name": "Argentina",
-        "sessions": 27
+        "sessions": 28
       },
       {
         "name": "Colombia",
-        "sessions": 15
+        "sessions": 13
       },
       {
         "name": "Ecuador",
-        "sessions": 12
+        "sessions": 11
       },
       {
         "name": "Spain",
@@ -688,8 +688,12 @@
         "sessions": 2
       },
       {
+        "name": "Portugal",
+        "sessions": 2
+      },
+      {
         "name": "China",
-        "sessions": 44
+        "sessions": 53
       },
       {
         "name": "Singapore",
@@ -698,10 +702,6 @@
       {
         "name": "(not set)",
         "sessions": 4
-      },
-      {
-        "name": "Australia",
-        "sessions": 3
       },
       {
         "name": "France",
@@ -716,7 +716,19 @@
         "sessions": 3
       },
       {
+        "name": "Australia",
+        "sessions": 2
+      },
+      {
+        "name": "Sin especificar",
+        "sessions": 1
+      },
+      {
         "name": "Algeria",
+        "sessions": 1
+      },
+      {
+        "name": "Brazil",
         "sessions": 1
       },
       {
@@ -738,54 +750,50 @@
       {
         "name": "Pakistan",
         "sessions": 1
-      },
-      {
-        "name": "Portugal",
-        "sessions": 1
       }
     ],
     "devices": [
       {
-        "name": "desktop",
-        "sessions": 1349
+        "name": "mobile",
+        "sessions": 1287
       },
       {
-        "name": "mobile",
-        "sessions": 1247
+        "name": "desktop",
+        "sessions": 1388
       },
       {
         "name": "tablet",
-        "sessions": 5
+        "sessions": 4
       }
     ],
     "channels": [
       {
-        "name": "Direct",
-        "sessions": 1296
+        "name": "Organic Search",
+        "sessions": 1028
       },
       {
-        "name": "Organic Search",
-        "sessions": 993
+        "name": "Direct",
+        "sessions": 1333
       },
       {
         "name": "Referral",
-        "sessions": 195
+        "sessions": 194
       },
       {
-        "name": "Organic Social",
-        "sessions": 10
+        "name": "AI Assistant",
+        "sessions": 66
       },
       {
         "name": "Unassigned",
         "sessions": 24
       },
       {
-        "name": "Organic Video",
-        "sessions": 3
+        "name": "Organic Social",
+        "sessions": 13
       },
       {
-        "name": "AI Assistant",
-        "sessions": 63
+        "name": "Organic Video",
+        "sessions": 6
       }
     ]
   },

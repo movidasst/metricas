@@ -1,0 +1,26 @@
+name: Actualizar métricas GA4
+on:
+  schedule:
+    - cron: '17 13 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: metricas-ga4
+  cancel-in-progress: false
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install google-auth==2.40.3 requests==2.32.4
+      - name: Consultar GA4 y publicar JSON
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+        run: python scripts/actualizar_metricas.py
